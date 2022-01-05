@@ -854,10 +854,11 @@ input[type='checkbox'] {
 /*     Footer     */
 /******************/
 .footer {
-	padding-top: 6.25rem;
-	padding-bottom: 3rem;
+	padding-top: 3.25rem;
+	padding-bottom: 2rem;
 	background-color: #24262a;
 	text-align: center;
+	
 }
 
 .footer a {
