@@ -1,30 +1,27 @@
-/* Description: Master CSS file */
+/* Master CSS file */
 
-/*****************************************
+/*****************************************\
 Table Of Contents:
 - General Styles
 - Navigation
 - Header
-- About
-- Services
-- Details
-- Projects
-- Works
-- Testimonials
-- Questions
-- Contact
-- Footer 
-- Copyright
+- Portfolio
+- Footer
 - Back To Top Button
-- Extra Pages
-- Media Queries
-******************************************/
+\******************************************/
+
 
 /**************************/
 /*     General Styles     */
 /**************************/
+
+html {
+	scroll-behavior: smooth;
+	scroll-behavior: smooth;
+  }
+
 body {
-	background-color: #eef8ff;
+	background-color: #dceefa; /* body color */
 	text-align: center;
 	padding-top: 200px; /* add padding to the top of the body element equal to the height of the navbar */
 	text-decoration: none;
@@ -190,7 +187,7 @@ a:hover {
 	padding: 1.375rem 2.25rem 1.375rem 2.25rem;
 	border: 1px solid #24262a;
 	background-color: transparent;
-	color: #24262a;
+	color: #2a2427;
 	font-weight: 600;
 	font-size: 0.875rem;
 	line-height: 0;
@@ -426,8 +423,8 @@ select {
 	padding: 0;
 	border: none;
 	font-size: 1.25rem;
-	background-color: #152141;
-	color: #2259ec;
+	background-color: #e3133b;
+	color: #1e3649;
 }
   
 
@@ -503,13 +500,50 @@ select {
   }
 
 
+/****************************/
+/*    Portfolio Section    */
+/***************************/
+
+.portfolio_section .row .col-md-6 {
+	margin: 45px 0;
+  }
+  
+.portfolio_section .box {
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+  }
+  
+.portfolio_section .box.b-1, .portfolio_section .box.b-4 {
+	margin-bottom: 20px;
+  }
+  
+.portfolio_section .box img {
+	width: 100%;
+  }
+  
+.portfolio_section .box h4 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+	width: 100%;
+	text-align: center;
+	color:#dceefa;
+	font-weight: bold;
+	font-size: 28px;
+	-webkit-filter: drop-shadow(8px 3px 8px #000000);
+			filter: drop-shadow(8px 3px 8px #000000);
+  }  
+
   
 /******************/
 /*     Footer    */
 /*****************/
 
 footer {
-  background-color: #eef8ff;
+  background-color: #dceefa;
   padding: 1rem 0;
   position: fixed;
   bottom: 0;
@@ -534,13 +568,13 @@ a.back-to-top {
 	width: 42px;
 	height: 42px;
 	border-radius: 30px;
-	background: #3a424d url("../images/up-arrow.png") no-repeat center 47%;
+	background: #1e3649 url("../images/up-arrow.png") no-repeat center 47%;
 	background-size: 18px 18px;
 	text-indent: -9999px;
 }
 
 a:hover.back-to-top {
-	background-color: #0b36a8;
+	background-color: #e3133b;
 }
 
 /* Min-width 992px */
@@ -572,7 +606,7 @@ a:hover.back-to-top {
 	.navbar.top-nav-collapse {
 		padding-top: 0.5rem;
 		padding-top: 0.5rem;
-		background-color: #2f2d2e; /* color of nav bar when scrolling down */
+		background-color: #c1e0f7; /* color of nav bar when scrolling down */
 		box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.025);
 	}
 
