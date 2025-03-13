@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ajay_cmds documentation &#8212; ajay_cmds 1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=5ecbeea2" />
+    <link rel="stylesheet" type="text/css" href="_static/basic.css?v=b08954a9" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=27fed22d" />
+    <script src="_static/documentation_options.js?v=29a6c3e3"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="ajay-cmds-documentation">
+<h1>ajay_cmds documentation<a class="headerlink" href="#ajay-cmds-documentation" title="Link to this heading">¶</a></h1>
+<p>Add your content using <code class="docutils literal notranslate"><span class="pre">reStructuredText</span></code> syntax. See the
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">reStructuredText</a>
+documentation for details.</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="torch-pytorch">
+<span id="torch-commands"></span><h1>Torch / PyTorch<a class="headerlink" href="#torch-pytorch" title="Link to this heading">¶</a></h1>
+<ol class="arabic">
+<li><p><strong>Check if Torch can find your GPU</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>It should return <code class="docutils literal notranslate"><span class="pre">True</span></code>; otherwise, Torch cannot find your GPU.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="anaconda-conda">
+<span id="conda-commands"></span><h1>Anaconda / Conda<a class="headerlink" href="#anaconda-conda" title="Link to this heading">¶</a></h1>
+<ol class="arabic">
+<li><p><strong>Create a new conda environment</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>env_name
+</pre></div>
+</div>
+</li>
+<li><p><strong>Create a new conda environment with a specific Python version and libraries</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>env_name<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.11<span class="w"> </span>pandas<span class="w"> </span>matplotlib
+</pre></div>
+</div>
+</li>
+<li><p><strong>Deactivate a conda environment</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>deactivate
+</pre></div>
+</div>
+</li>
+<li><p><strong>Remove a conda environment</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>remove<span class="w"> </span>-n<span class="w"> </span>env_name<span class="w"> </span>--all
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="docker-commands">
+<span id="id1"></span><h1>Docker Commands<a class="headerlink" href="#docker-commands" title="Link to this heading">¶</a></h1>
+<ol class="arabic">
+<li><p><strong>List all Docker containers (including stopped ones)</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>ps<span class="w"> </span>-a
+</pre></div>
+</div>
+</li>
+<li><p><strong>List all Docker images</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>images
+</pre></div>
+</div>
+</li>
+<li><p><strong>See hardware usage of running Docker images</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>stats
+</pre></div>
+</div>
+</li>
+<li><p><strong>Remove a Docker container</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>&lt;container_id&gt;
+</pre></div>
+</div>
+</li>
+<li><p><strong>Enter the shell of a running Docker container</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;container_id&gt;<span class="w"> </span>/bin/bash
+</pre></div>
+</div>
+</li>
+<li><p><strong>Run Open-WebUI using Docker to make it accessible across the network</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>-v<span class="w"> </span>open-webui:/app/backend/data<span class="w"> </span><span class="se">\</span>
+-e<span class="w"> </span><span class="nv">OLLAMA_BASE_URL</span><span class="o">=</span>http://127.0.0.1:11434<span class="w"> </span><span class="se">\</span>
+--name<span class="w"> </span>open-webui-main<span class="w"> </span>--restart<span class="w"> </span>always<span class="w"> </span><span class="se">\</span>
+ghcr.io/open-webui/open-webui:cuda
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="scp-secure-copy">
+<span id="scp-commands"></span><h1>SCP (Secure Copy)<a class="headerlink" href="#scp-secure-copy" title="Link to this heading">¶</a></h1>
+<ol class="arabic">
+<li><p><strong>Send a file from your local computer to a remote machine</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span><span class="o">[</span>options/flags<span class="o">]</span><span class="w"> </span>path/to/local/file<span class="w"> </span>remote_user@remote_ip:/path/to/destination
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Find your <code class="docutils literal notranslate"><span class="pre">remote_user</span></code> using the <code class="docutils literal notranslate"><span class="pre">whoami</span></code> command.</p></li>
+<li><p>Find your remote machine’s IP address using <code class="docutils literal notranslate"><span class="pre">hostname</span> <span class="pre">-I</span></code>.</p></li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>-r<span class="w"> </span>./models<span class="w"> </span>appuser@192.168.1.229:/usr/share/ollama/.ollama/models
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="rsync-and-parallel-for-fast-file-transfers">
+<span id="rsync-parallel-commands"></span><h1>Rsync and Parallel for Fast File Transfers<a class="headerlink" href="#rsync-and-parallel-for-fast-file-transfers" title="Link to this heading">¶</a></h1>
+<p>(Coming soon)</p>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="Main">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">ajay_cmds</a></h1>
+
+
+
+
+
+
+
+
+
+<search id="searchbox" style="display: none" role="search">
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Search"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script><h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2025, Ajay.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 8.2.3</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 1.0.0</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
