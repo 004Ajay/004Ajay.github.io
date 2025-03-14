@@ -116,6 +116,4 @@ SCP (Secure Copy)
 
 Rsync and Parallel for Fast File Transfers
 ==========================================
-Find 
-rsync
 (Stay tuned! It's coming soon)
