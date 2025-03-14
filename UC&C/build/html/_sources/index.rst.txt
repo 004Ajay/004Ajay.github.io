@@ -1,6 +1,3 @@
-Useful Commands and Codes
-=========================
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
