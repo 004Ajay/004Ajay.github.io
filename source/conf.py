@@ -32,4 +32,4 @@ exclude_patterns = []
 
 html_theme = 'nature'
 html_static_path = ['_static']
-html_baseurl = "https://004ajay.github.io/build"
+html_baseurl = "https://004ajay.github.io/"
