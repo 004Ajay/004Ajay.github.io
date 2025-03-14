@@ -30,6 +30,6 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_baseurl = "https://004ajay.github.io/UC&C/"
+html_baseurl = "https://004Ajay.github.io/UC&C/build/html" 
 html_theme = 'nature'
 html_static_path = ['_static']
