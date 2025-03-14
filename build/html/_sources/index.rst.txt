@@ -14,8 +14,7 @@ Torch / PyTorch
 
    .. code-block:: python
       
-      >>> import torch; torch.cuda.is_available()
-      $ touch man.py
+      import torch; torch.cuda.is_available()
 
    - It should return ``True``; otherwise, Torch cannot find your GPU.
 
