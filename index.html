@@ -1,180 +1,104 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay T Shaju</title>
+    <link rel="icon" type="image/x-icon" href="Assets/AJ.ico">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
 
-<html lang="en" data-content_root="./">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-    <title>Torch / PyTorch &#8212; UC&amp;C 1 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <script src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
-  </head><body>
-    <!-- <div class="related" role="navigation" aria-label="Related">
-      <h3>Navigation</h3>
-      <ul>
-        <li class="right" style="margin-right: 10px">
-          <a href="genindex.html" title="General Index"
-             accesskey="I">index</a></li>
-        <li class="nav-item nav-item-0"><a href="#">UC&amp;C 1 documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">Torch / PyTorch</a></li> 
-      </ul>
-    </div>   -->
+        header nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
-          <div class="body" role="main">
-            
-  <div class="toctree-wrapper compound">
-</div>
-<section id="torch-pytorch">
-<span id="torch-commands"></span><h1>Torch / PyTorch<a class="headerlink" href="#torch-pytorch" title="Link to this heading">¶</a></h1>
-<ol class="arabic">
-<li><p><strong>Check if Torch can find your GPU</strong></p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span><span class="p">;</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span>
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>It should return <code class="docutils literal notranslate"><span class="pre">True</span></code>; otherwise, Torch cannot find your GPU.</p></li>
-</ul>
-</li>
-</ol>
-</section>
-<section id="anaconda-conda">
-<span id="conda-commands"></span><h1>Anaconda / Conda<a class="headerlink" href="#anaconda-conda" title="Link to this heading">¶</a></h1>
-<ol class="arabic">
-<li><p><strong>Create a new conda environment</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>env_name
-</pre></div>
-</div>
-</li>
-<li><p><strong>Create a new conda environment with a specific Python version and libraries</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>env_name<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.11<span class="w"> </span>pandas<span class="w"> </span>matplotlib
-</pre></div>
-</div>
-</li>
-<li><p><strong>Deactivate a conda environment</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>deactivate
-</pre></div>
-</div>
-</li>
-<li><p><strong>Remove a conda environment</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>remove<span class="w"> </span>-n<span class="w"> </span>env_name<span class="w"> </span>--all
-</pre></div>
-</div>
-</li>
-</ol>
-</section>
-<section id="docker-commands">
-<span id="id1"></span><h1>Docker Commands<a class="headerlink" href="#docker-commands" title="Link to this heading">¶</a></h1>
-<ol class="arabic">
-<li><p><strong>List all Docker containers (including stopped ones)</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>ps<span class="w"> </span>-a
-</pre></div>
-</div>
-</li>
-<li><p><strong>List all Docker images</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>images
-</pre></div>
-</div>
-</li>
-<li><p><strong>See hardware usage of running Docker images</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>stats
-</pre></div>
-</div>
-</li>
-<li><p><strong>Remove a Docker container</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span>&lt;container_id&gt;
-</pre></div>
-</div>
-</li>
-<li><p><strong>Enter the shell of a running Docker container</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>docker<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>-it<span class="w"> </span>&lt;container_id&gt;<span class="w"> </span>/bin/bash
-</pre></div>
-</div>
-</li>
-<li><p><strong>Run Open-WebUI using Docker to make it accessible across the network</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--network<span class="o">=</span>host<span class="w"> </span>-v<span class="w"> </span>open-webui:/app/backend/data<span class="w"> </span><span class="se">\</span>
--e<span class="w"> </span><span class="nv">OLLAMA_BASE_URL</span><span class="o">=</span>http://127.0.0.1:11434<span class="w"> </span><span class="se">\</span>
---name<span class="w"> </span>open-webui-main<span class="w"> </span>--restart<span class="w"> </span>always<span class="w"> </span><span class="se">\</span>
-ghcr.io/open-webui/open-webui:cuda
-</pre></div>
-</div>
-</li>
-</ol>
-</section>
-<section id="scp-secure-copy">
-<span id="scp-commands"></span><h1>SCP (Secure Copy)<a class="headerlink" href="#scp-secure-copy" title="Link to this heading">¶</a></h1>
-<ol class="arabic">
-<li><p><strong>Send a file from your local computer to a remote machine</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span><span class="o">[</span>options/flags<span class="o">]</span><span class="w"> </span>path/to/local/file<span class="w"> </span>remote_user@remote_ip:/path/to/destination
-</pre></div>
-</div>
-<ul class="simple">
-<li><p>Find your <code class="docutils literal notranslate"><span class="pre">remote_user</span></code> using the <code class="docutils literal notranslate"><span class="pre">whoami</span></code> command.</p></li>
-<li><p>Find your remote machine’s IP address using <code class="docutils literal notranslate"><span class="pre">hostname</span> <span class="pre">-I</span></code>.</p></li>
-</ul>
-<p><strong>Example:</strong></p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scp<span class="w"> </span>-r<span class="w"> </span>./models<span class="w"> </span>appuser@192.168.1.229:/usr/share/ollama/.ollama/models
-</pre></div>
-</div>
-</li>
-</ol>
-</section>
-<section id="rsync-and-parallel-for-fast-file-transfers">
-<span id="rsync-parallel-commands"></span><h1>Rsync and Parallel for Fast File Transfers<a class="headerlink" href="#rsync-and-parallel-for-fast-file-transfers" title="Link to this heading">¶</a></h1>
-<p>(Stay tuned! It’s coming soon)</p>
-</section>
+        header nav a:hover {
+            color: #0078d4;
+        }
 
+        .container {
+            padding: 50px 20px;
+        }
 
-            <div class="clearer"></div>
-          </div>
+        .container h1 {
+            color: #0078d4;
+            margin-bottom: 20px;
+        }
+
+        .container a {
+            color: #0078d4;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .container a:hover {
+            text-decoration: underline;
+        }
+
+        .profile-pic {
+            margin: 30px auto;
+            max-width: 350px;
+            width: 100%;
+            height: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .social-icons {
+            margin-top: 30px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-size: 24px;
+        }
+
+        .social-icons a:hover {
+            color: #0078d4;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://sites.google.com/view/004ajay">
+    <div>AJAY T SHAJU</div>
+    </a>
+
+    <div class="container">
+        <h1>New update to Ajay's webpage</h1>
+        <p>See the new webpage:</p>
+        <p><a href="https://sites.google.com/view/004ajay" target="_blank">https://sites.google.com/view/004ajay</a></p>
+        <img src="Assets/Ajay.png" alt="Ajay's Profile Picture" class="profile-pic">
+        <p>You can find me on most of the popular social media</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/ajay-t-shaju/" target="_blank"><img src="Assets/linkedin.png" alt="LinkedIn" width="32"></a>
+            <a href="http://github.com/004Ajay" target="_blank"><img src="Assets/github.png" alt="GitHub" width="32"></a>
+            <a href="https://medium.com/@ajaytshaju" target="_blank"><img src="Assets/medium.png" alt="Medium" width="32"></a>
+            <a href="https://www.instagram.com/mr_againster/" target="_blank"><img src="Assets/instagram.png" alt="Instagram" width="32"></a>
+            <a href="https://www.youtube.com/channel/UCtWYnWGJfXacrDALYWUBx1Q" target="_blank"><img src="Assets/youtube.png" alt="YouTube" width="32"></a>
+            <a href="https://www.facebook.com/ajaytshaju/" target="_blank"><img src="Assets/facebook.png" alt="Facebook" width="32"></a>
         </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
-  <div>
-    <h3><a href="#">Table of Contents</a></h3>
-    <ul>
-<li><a class="reference internal" href="#">Torch / PyTorch</a></li>
-<li><a class="reference internal" href="#anaconda-conda">Anaconda / Conda</a></li>
-<li><a class="reference internal" href="#docker-commands">Docker Commands</a></li>
-<li><a class="reference internal" href="#scp-secure-copy">SCP (Secure Copy)</a></li>
-<li><a class="reference internal" href="#rsync-and-parallel-for-fast-file-transfers">Rsync and Parallel for Fast File Transfers</a></li>
-</ul>
-
-  </div>
-  <!-- <div role="note" aria-label="source link">
-    <h3>This Page</h3>
-    <ul class="this-page-menu">
-      <li><a href="_sources/index.rst.txt"
-            rel="nofollow">Show Source</a></li>
-    </ul>
-   </div> -->
-<search id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
     </div>
-</search>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-        </div>
-      </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer" role="contentinfo">
-    &#169; Copyright Ajay, 2025
-    </div>
-  </body>
+    <!-- <p><a href="./UC&C/build/html/index.html" target="_blank">move</a></p> -->
+    Link to UC&C: 
+    <p><a href="https://004ajay.github.io/UC&C/build/html/index.html" target="_blank">https://004ajay.github.io/UC&C/build/html/index.html</a></p>
+</body>
 </html>
