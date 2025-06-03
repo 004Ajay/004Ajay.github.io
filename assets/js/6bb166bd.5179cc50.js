@@ -1,0 +1,11 @@
+"use strict";
+(self["webpackChunkmy_website"] = self["webpackChunkmy_website"] || []).push([[8518],{
+
+/***/ 3618:
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"Tutorial - Extras","slug":"/category/tutorial---extras","permalink":"/docs/category/tutorial---extras","sidebar":"tutorialSidebar","navigation":{"previous":{"title":"Skills","permalink":"/docs/resume/Skills"},"next":{"title":"Manage Docs Versions","permalink":"/docs/tutorial-extras/manage-docs-versions"}}}}');
+
+/***/ })
+
+}]);

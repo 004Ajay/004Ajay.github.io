@@ -1,0 +1,11 @@
+"use strict";
+(self["webpackChunkmy_website"] = self["webpackChunkmy_website"] || []).push([[2172],{
+
+/***/ 7357:
+/***/ ((module) => {
+
+module.exports = /*#__PURE__*/JSON.parse('{"categoryGeneratedIndex":{"title":"Resume","description":"A replica of my PDF Resume.","slug":"/category/resume","permalink":"/docs/category/resume","sidebar":"tutorialSidebar","navigation":{"previous":{"title":"cuDF Pandas","permalink":"/docs/commands/cuDF Pandas"},"next":{"title":"Achievements","permalink":"/docs/resume/Achievements"}}}}');
+
+/***/ })
+
+}]);
