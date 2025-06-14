@@ -1,0 +1,26 @@
+# slorber:
+#   name: Sébastien Lorber
+#   title: Docusaurus maintainer
+#   url: https://sebastienlorber.com
+#   image_url: https://github.com/slorber.png
+#   page:
+#     # customize the url of the author page at /blog/authors/<permalink>
+#     permalink: '/all-sebastien-lorber-articles'
+#   socials:
+#     x: sebastienlorber
+#     linkedin: sebastienlorber
+#     github: slorber
+#     newsletter: https://thisweekinreact.com
+
+
+ajay:
+  name: Ajay T Shaju
+  title: AI & DS Engineer
+  url: https://004ajay.github.io/
+  image_url: https://github.com/004ajay.png
+  page: true
+  socials:
+    linkedin: https://www.linkedin.com/in/ajaytshaju/
+    github: 004ajay
+    medium: https://medium.com/@ajaytshaju
+    x: 004ajayt
