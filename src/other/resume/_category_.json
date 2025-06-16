@@ -1,0 +1,8 @@
+{
+  "label": "Resume",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "A replica of my PDF Resume."
+  }
+}
