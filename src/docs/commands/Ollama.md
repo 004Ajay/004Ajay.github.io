@@ -118,3 +118,7 @@ To see the error logs of ollama (limiting to the latest 50 lines)
 ```bash
 journalctl -u ollama -n 50
 ```
+
+## Ollama and Open WebUI from separate computers
+
+hidden
