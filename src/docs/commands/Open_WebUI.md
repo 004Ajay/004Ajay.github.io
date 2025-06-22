@@ -55,7 +55,9 @@ Example: ```sudo docker rm -f open-webui:cuda```
 
 <br />
 
-### 4. Pull the latest image from Open-WebUI GitHub/Website (it will take some time)
+### 4. Pull the latest image from Open-WebUI GitHub/Website
+
+_*Note*: This will take some time_
 
 ```bash
 sudo docker pull ghcr.io/open-webui/open-webui:cuda

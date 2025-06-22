@@ -4,10 +4,62 @@
         <title>AJAY Blog</title>
         <link>https://004ajay.github.io/blog</link>
         <description>AJAY Blog</description>
-        <lastBuildDate>Sun, 04 May 2025 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 22 Jun 2025 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
+        <item>
+            <title><![CDATA[Setting up Nvidia Drivers for GPU access on Ubuntu]]></title>
+            <link>https://004ajay.github.io/blog/nvidia-drivers</link>
+            <guid>https://004ajay.github.io/blog/nvidia-drivers</guid>
+            <pubDate>Sun, 22 Jun 2025 00:00:00 GMT</pubDate>
+            <description><![CDATA[Read on Medium]]></description>
+            <content:encoded><![CDATA[<p>Read on <a href="https://medium.com/@ajaytshaju" target="_blank" rel="noopener noreferrer">Medium</a></p>
+<p>After upgrading my Ubuntu from 18 to 22, I left with no nvidia drivers on my computer. When I type <code>nvidia-smi</code> and <code>nvcc -v</code> there was no good output (see the image below). So I planned to show my way of setting up GPU drivers on my computer to the world. If your situation is the same, then follow along.</p>
+<p><img decoding="async" loading="lazy" alt="No good output for nvidia-smi and nvcc -v" src="https://004ajay.github.io/assets/images/nvidia-smi%20and%20nvcc-v%20no%20output-dad7723cb8fbc928b49ae41b18fb0ffb.png" width="1816" height="839" class="img_ev3q"></p>
+<p>No good output for nvidia-smi and nvcc -v</p>
+<p>Before starting, I will give a short lesson on drivers</p>
+<blockquote>
+<p>Drivers allow OS ↔ hardware communication. NVIDIA drivers are essential to communicate with your GPU, for graphics and compute functionality.</p>
+</blockquote>
+<p>Drivers are softwares which act as translators between your OS and the hardware (like GPU, printer, or keyboard). NVIDIA drivers are crucial to communicate correctly with NVIDIA GPUs. <code>Nvidia Graphics Drivers</code> for rendering visuals in games and videos, and <code>Compute Unified Device Architecture (CUDA) Drivers</code> for GPU-accelerated computations like deep learning and scientific computing.</p>
+<p>Now lets start with</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="the-real-processes">The real processes<a href="https://004ajay.github.io/blog/nvidia-drivers#the-real-processes" class="hash-link" aria-label="Direct link to The real processes" title="Direct link to The real processes">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="check-if-your-system-detects-the-gpu">Check if your system detects the GPU<a href="https://004ajay.github.io/blog/nvidia-drivers#check-if-your-system-detects-the-gpu" class="hash-link" aria-label="Direct link to Check if your system detects the GPU" title="Direct link to Check if your system detects the GPU">​</a></h3>
+<p><code>lspci | grep -i nvidia</code></p>
+<p>This will check for the presence of nvidia gpu in your system. If this command doesn't give a good output like in the image below, then you can stop here, because your system doesn't have a nvidia gpu or it is not detected the gpu.</p>
+<p><img decoding="async" loading="lazy" alt="My system is detecting the Nvidia GPU" src="https://004ajay.github.io/assets/images/lspci%20output-8a2690ce44ec75f19215eec6e5673963.png" width="2139" height="225" class="img_ev3q"></p>
+<p>My system is detecting the Nvidia GPU</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="install-drivers">Install Drivers<a href="https://004ajay.github.io/blog/nvidia-drivers#install-drivers" class="hash-link" aria-label="Direct link to Install Drivers" title="Direct link to Install Drivers">​</a></h3>
+<p>If the above commands work, then try <code>nvidia-smi</code>, you might get a list of drivers as the output of nvidia-smi (see the image above). Normally we need to select the best driver, but sometimes we may not be up to date with the new driver details, so we can offload the driver version decision to our system by giving the command <code>ubuntu-drivers devices</code> this will show a list of available and compatible drivers for our GPU, then we will auto install the best driver using <code>sudo ubuntu-drivers autoinstall</code> this will show long commands running and installing, don't worry it is installing the best driver. On finishing, just give a good <code>sudo reboot</code> (restart) to your system, so the system can understand the new changes.</p>
+<blockquote>
+<p>In between let me explain what is happening - When you install drivers using <code>sudo ubuntu-drivers autoinstall</code>, you're installing some files that allows Linux to detect and communicate with your GPU, this will enable <code>nvidia-smi</code> to show a box output. If you want to use GPU-accelerated apps like Blender, video editors, or run ML/DL programs (eg, inference using PyTorch or TensorFlow), then installing the driver is enough. But if you want to go further into ML/DL development and LLM finetuning which uses libraries like xFormers, bitsandbytes, and triton then you need to do some more steps, i.e installing <code>nvidia-cuda-toolkit</code>.</p>
+</blockquote>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="checking-nvidia-smi-install-nvidia-cuda-toolkit">Checking nvidia-smi; Install nvidia-cuda-toolkit<a href="https://004ajay.github.io/blog/nvidia-drivers#checking-nvidia-smi-install-nvidia-cuda-toolkit" class="hash-link" aria-label="Direct link to Checking nvidia-smi; Install nvidia-cuda-toolkit" title="Direct link to Checking nvidia-smi; Install nvidia-cuda-toolkit">​</a></h3>
+<p><em><strong>Note</strong>: Read this section fully before running any commands</em></p>
+<p>After reboot get into the terminal and quickly type <code>nvidia-smi</code> and you will get a box like output with information such as your GPU name, power usage, memory usage, CUDA version, processes utilizing gpu currently etc...but when typing <code>nvcc -v</code> there won't be any output and it will ask you to install nvidia-cuda-toolkit, and we need to do <code>sudo apt install nvidia-cuda-toolkit</code> which may take some time. This is linked with the ubuntu version you have, for Ubuntu 22.04, CUDA 11.7 or later may be installed, this is easy when you need to install cuda-toolkit for a usecase which requires any version above 11.7 (here). But If you want a specific version, like CUDA Toolkit 12.8, you need to install it manually from <a href="https://developer.nvidia.com/cuda-toolkit-archive" target="_blank" rel="noopener noreferrer">this</a> website by selecting the version you need, giving info such as OS, Architecture, Distribution, Version, Installer Type and finally following the commands displayed.</p>
+<p>On finishing, check the output of <code>nvcc -v</code> to confirm it has installed the toolkit.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="pytorch-installation-optional">PyTorch Installation (Optional)<a href="https://004ajay.github.io/blog/nvidia-drivers#pytorch-installation-optional" class="hash-link" aria-label="Direct link to PyTorch Installation (Optional)" title="Direct link to PyTorch Installation (Optional)">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="start-loacally-with-pytorch">Start Loacally with Pytorch<a href="https://004ajay.github.io/blog/nvidia-drivers#start-loacally-with-pytorch" class="hash-link" aria-label="Direct link to Start Loacally with Pytorch" title="Direct link to Start Loacally with Pytorch">​</a></h3>
+<p>I need to install Pytorch for some coding purposes. I will be doing it in a conda environment (if you're not familiar with conda, you can use python virtual environments, or you can follow this <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html" target="_blank" rel="noopener noreferrer">conda website</a> to install conda, create and activate a new environment and install latest Pytorch that is compatible with your CUDA version - see their <a href="https://pytorch.org/get-started/locally/" target="_blank" rel="noopener noreferrer">Start Locally Website</a>, give details like your OS, package, language, compute platform and copy the final command and run on your virtual environment to install Pytorch, this will take some time based on your internet speed.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="checking-if-torch-can-access-our-gpu">Checking if torch can access our GPU<a href="https://004ajay.github.io/blog/nvidia-drivers#checking-if-torch-can-access-our-gpu" class="hash-link" aria-label="Direct link to Checking if torch can access our GPU" title="Direct link to Checking if torch can access our GPU">​</a></h3>
+<p>Now you can enter into Python IDLE on terminal and run <code>import torch; torch.cuda.is_available()</code> - if it returns <code>True</code>, then your installation is successful. Otherwise there is some problem in between some commands or installations. If you have noticed any warning, red command etc..then debug on that.</p>
+<p><img decoding="async" loading="lazy" alt="Checking if torch can access our GPU, on Python IDLE" src="https://004ajay.github.io/assets/images/Python%20IDLE%20for%20torch-8e3bd28bf5c9334d82b4ae5ddfe1250c.png" width="916" height="128" class="img_ev3q"></p>
+<p>Checking if torch can access our GPU, on Python IDLE</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="test-your-installation">Test your installation<a href="https://004ajay.github.io/blog/nvidia-drivers#test-your-installation" class="hash-link" aria-label="Direct link to Test your installation" title="Direct link to Test your installation">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="setting-up-a-local-llm">Setting up a local LLM<a href="https://004ajay.github.io/blog/nvidia-drivers#setting-up-a-local-llm" class="hash-link" aria-label="Direct link to Setting up a local LLM" title="Direct link to Setting up a local LLM">​</a></h3>
+<p>If everything is fine, we can try setting up Ollama (<a href="https://ollama.com/" target="_blank" rel="noopener noreferrer">Website</a> | <a href="http://github.com/ollama/ollama" target="_blank" rel="noopener noreferrer">GitHub</a>) and test whether an LLM is able to use our consumer gpu to predict tokens.</p>
+<p>Install ollama using <code>curl -fsSL https://ollama.com/install.sh | sh</code> wait for it to finish and finally you can see a message from ollama <code>NVIDIA GPU installed</code> and you can run a small LLM like llama or mistral (ollama run mistral) and test whether they're utilising our GPU by checking <code>nvtop</code> or see if the LLM is generating the text fast.</p>
+<p><img decoding="async" loading="lazy" alt="Ollama detects our GPU" src="https://004ajay.github.io/assets/images/Ollama%20Installation-e3b82df32d1483d59ac74c9320c52eed.png" width="1431" height="338" class="img_ev3q"></p>
+<p>Ollama detects our GPU</p>
+<p>So that's it, now you will have GPU acceleration for your tasks. Good Luck!</p>]]></content:encoded>
+            <category>NVIDIA</category>
+            <category>Drivers</category>
+            <category>CUDA</category>
+            <category>Ubuntu</category>
+            <category>Ollama</category>
+            <category>GPU</category>
+        </item>
         <item>
             <title><![CDATA[Bash to Fish: A Terminal Change]]></title>
             <link>https://004ajay.github.io/blog/bash-to-fish</link>

@@ -93,4 +93,22 @@ ubuntu:
   permalink: /ubuntu
   description: Ubuntu tag description
   
-    
+nvidia:
+  label: NVIDIA
+  permalink: /nvidia
+  description: NVIDIA tag description
+
+drivers:
+  label: Drivers
+  permalink: /drivers
+  description: Drivers tag description
+
+cuda:
+  label: CUDA
+  permalink: /cuda
+  description: CUDA tag description
+
+ollama:
+  label: Ollama
+  permalink: /ollama
+  description: Ollama tag description        
