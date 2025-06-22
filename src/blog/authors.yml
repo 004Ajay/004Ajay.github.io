@@ -1,3 +1,16 @@
+ajay:
+  name: Ajay T Shaju
+  title: AI & DS Engineer
+  url: https://004ajay.github.io/
+  image_url: https://github.com/004ajay.png
+  page: true
+  socials:
+    linkedin: https://www.linkedin.com/in/ajay-t-shaju/
+    github: 004ajay
+    medium: https://medium.com/@ajaytshaju
+    x: 004ajayt
+
+
 # slorber:
 #   name: Sébastien Lorber
 #   title: Docusaurus maintainer
@@ -10,17 +23,4 @@
 #     x: sebastienlorber
 #     linkedin: sebastienlorber
 #     github: slorber
-#     newsletter: https://thisweekinreact.com
-
-
-ajay:
-  name: Ajay T Shaju
-  title: AI & DS Engineer
-  url: https://004ajay.github.io/
-  image_url: https://github.com/004ajay.png
-  page: true
-  socials:
-    linkedin: https://www.linkedin.com/in/ajaytshaju/
-    github: 004ajay
-    medium: https://medium.com/@ajaytshaju
-    x: 004ajayt
+#     newsletter: https://thisweekinreact.com    

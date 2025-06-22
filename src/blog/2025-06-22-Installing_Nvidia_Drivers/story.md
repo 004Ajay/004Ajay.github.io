@@ -7,7 +7,7 @@ tags: [nvidia, drivers, cuda, ubuntu, ollama, gpu]
 
 Read on [Medium](https://medium.com/@ajaytshaju)
 
-After upgrading my Ubuntu from 18 to 22, I left with no nvidia drivers on my computer. When I type `nvidia-smi` and `nvcc -v` there was no good output (see the image below). So I planned to show my way of setting up GPU drivers on my computer to the world. If your situation is the same, then follow along.
+After upgrading my Ubuntu from 18 to 22, I was left with no Nvidia drivers on my computer. When I type `nvidia-smi` and `nvcc -v` there was no good output (see the image below). So, I planned to share my method for setting up GPU drivers on my computer with the world. If your situation is the same, then follow along.
 
 <!-- truncate -->
 
@@ -19,9 +19,9 @@ Before starting, I will give a short lesson on drivers
 
 > Drivers allow OS ↔ hardware communication. NVIDIA drivers are essential to communicate with your GPU, for graphics and compute functionality. 
 
-Drivers are softwares which act as translators between your OS and the hardware (like GPU, printer, or keyboard). NVIDIA drivers are crucial to communicate correctly with NVIDIA GPUs. `Nvidia Graphics Drivers` for rendering visuals in games and videos, and `Compute Unified Device Architecture (CUDA) Drivers` for GPU-accelerated computations like deep learning and scientific computing.
+Drivers are software that act as translators between your OS and the hardware (like the GPU, printer, or keyboard). NVIDIA drivers are crucial to communicate correctly with NVIDIA GPUs. `Nvidia Graphics Drivers` for rendering visuals in games and videos, and `Compute Unified Device Architecture (CUDA) Drivers` for GPU-accelerated computations like deep learning and scientific computing.
 
-Now lets start with
+Now let's start with
 
 ## The real processes
 
@@ -29,7 +29,7 @@ Now lets start with
 
 `lspci | grep -i nvidia`
 
-This will check for the presence of nvidia gpu in your system. If this command doesn't give a good output like in the image below, then you can stop here, because your system doesn't have a nvidia gpu or it is not detected the gpu.
+This will check for the presence of an NVIDIA GPU in your system. If this command doesn't give a good output like in the image below, then you can stop here, because your system doesn't have an NVIDIA GPU or it is not detecting the GPU.
 
 ![My system is detecting the Nvidia GPU](lspci%20output.png)
 
@@ -52,13 +52,13 @@ On finishing, check the output of `nvcc -v` to confirm it has installed the tool
 
 ## PyTorch Installation (Optional)
 
-### Start Loacally with Pytorch
+### Start Locally with PyTorch
 
-I need to install Pytorch for some coding purposes. I will be doing it in a conda environment (if you're not familiar with conda, you can use python virtual environments, or you can follow this [conda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) to install conda, create and activate a new environment and install latest Pytorch that is compatible with your CUDA version - see their [Start Locally Website](https://pytorch.org/get-started/locally/), give details like your OS, package, language, compute platform and copy the final command and run on your virtual environment to install Pytorch, this will take some time based on your internet speed.
+I need to install PyTorch for some coding purposes. I will be doing it in a conda environment (if you're not familiar with conda, you can use Python Virtual Environments, or you can follow this [conda website](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html) to install conda, create and activate a new environment) and install the latest PyTorch that is compatible with your CUDA version - see their [Start Locally Website](https://pytorch.org/get-started/locally/), give details like your OS, package, language, compute platform and copy the final command and run on your virtual environment to install Pytorch, this will take some time based on your internet speed.
 
 ### Checking if torch can access our GPU
 
-Now you can enter into Python IDLE on terminal and run `import torch; torch.cuda.is_available()` - if it returns `True`, then your installation is successful. Otherwise there is some problem in between some commands or installations. If you have noticed any warning, red command etc..then debug on that.
+Enter Python IDLE on the terminal and run `import torch; torch.cuda.is_available()` - if it returns `True`, then your installation is successful. Otherwise, there is a problem with any commands or installations. If you have noticed any warning, red command, etc...then debug on that.
 
 ![Checking if torch can access our GPU, on Python IDLE](Python%20IDLE%20for%20torch.png)
 
@@ -68,9 +68,9 @@ Checking if torch can access our GPU, on Python IDLE
 
 ### Setting up a local LLM
 
-If everything is fine, we can try setting up Ollama ([Website](https://ollama.com/) | [GitHub](http://github.com/ollama/ollama)) and test whether an LLM is able to use our consumer gpu to predict tokens.
+If everything is fine, we can try setting up Ollama ([Website](https://ollama.com/) | [GitHub](http://github.com/ollama/ollama)) and test whether an LLM is able to use our consumer GPU to predict tokens.
 
-Install ollama using `curl -fsSL https://ollama.com/install.sh | sh` wait for it to finish and finally you can see a message from ollama `NVIDIA GPU installed` and you can run a small LLM like llama or mistral (ollama run mistral) and test whether they're utilising our GPU by checking `nvtop` or see if the LLM is generating the text fast.
+Install ollama using `curl -fsSL https://ollama.com/install.sh | sh` wait for it to finish and, finally, you can see a message from Ollama `NVIDIA GPU installed` and you can run a small LLM like llama or mistral (ollama run mistral) and test whether they're utilising our GPU by checking `nvtop` or see if the LLM is generating the text fast.
 
 ![Ollama detects our GPU](Ollama%20Installation.png)
 
