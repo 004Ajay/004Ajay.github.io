@@ -40,3 +40,95 @@
 {
   font-size: 2.5rem;
 }
+
+.navbar-github-link {
+  &:after {
+    transition: opacity 0.2s;
+    content: "";
+    width: 24px;
+    height: 24px;
+    display: flex;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23fff' d='M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.navbar-portfolio-link {
+  position: relative; /* For pseudo-element positioning */
+  display: inline-block; /* Or block, as needed */
+ }
+ .navbar-portfolio-link::after {
+  transition: opacity 0.2s;
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%270%200%2024%2024%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Ccircle%20cx%3D%2712%27%20cy%3D%2712%27%20r%3D%2710%27%20fill%3D%27%23e0f2f7%27%2F%3E%3Cpath%20d%3D%27M2%2012h20M12%202a15.3%2015.3%200%20010%2020%2015.3%2015.3%200%20010-20%20M12%202c4.42%200%208%204.47%208%2010s-3.58%2010-8%2010-8-4.47-8-10%203.58-10%208-10z%27%20stroke%3D%27%232196f3%27%20stroke-width%3D%271.5%27%20fill%3D%27none%27%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+ }
+ .navbar-portfolio-link:hover::after {
+  opacity: 1;
+ }
+
+ /* Docs Icon with Light Grey color and hover effect */
+ .navbar-docs-link {
+  position: relative;
+  display: inline-block;
+ }
+ .navbar-docs-link::after {
+  transition: opacity 0.2s;
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%270%200%2024%2024%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Crect%20x%3D%273%27%20y%3D%273%27%20width%3D%2718%27%20height%3D%2718%27%20rx%3D%272%27%20fill%3D%27%23f5f5f5%27%20stroke%3D%27%239e9e9e%27%20stroke-width%3D%271.5%27%2F%3E%3Cpath%20d%3D%27M7%207h10M7%2011h8M7%2015h6%27%20stroke%3D%27%239e9e9e%27%20stroke-width%3D%271.5%27%20stroke-linecap%3D%27round%27%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+ }
+ .navbar-docs-link:hover::after {
+  opacity: 1;
+ }
+
+ /* Commands Icon with Green color and hover effect */
+ .navbar-commands-link {
+  position: relative;
+  display: inline-block;
+ }
+ .navbar-commands-link::after {
+  transition: opacity 0.2s;
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%270%200%2024%2024%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Crect%20x%3D%273%27%20y%3D%274%27%20width%3D%2718%27%20height%3D%2716%27%20rx%3D%272%27%20fill%3D%27%23e8f5e9%27%20stroke%3D%27%234caf50%27%20stroke-width%3D%271.5%27%2F%3E%3Cpath%20d%3D%27M7%208l-2%202%202%202M10%208h6%27%20stroke%3D%27%234caf50%27%20stroke-width%3D%271.5%27%20stroke-linecap%3D%27round%27%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+ }
+ .navbar-commands-link:hover::after {
+  opacity: 1;
+ }
+
+ /* Blog Icon with Light Blue color and hover effect */
+ .navbar-blog-link {
+  position: relative;
+  display: inline-block;
+ }
+ .navbar-blog-link::after {
+  transition: opacity 0.2s;
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: flex;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%270%200%2024%2024%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Crect%20x%3D%273%27%20y%3D%273%27%20width%3D%2718%27%20height%3D%2714%27%20rx%3D%272%27%20fill%3D%27%23e0f7fa%27%20stroke%3D%27%2300bcd4%27%20stroke-width%3D%271.5%27%2F%3E%3Cpath%20d%3D%27M5%207h14M5%2010h10M5%2013h8%27%20stroke%3D%27%2300bcd4%27%20stroke-width%3D%271.5%27%20stroke-linecap%3D%27round%27%2F%3E%3Cpath%20d%3D%27M17%2017l2%202%20-3%201%27%20fill%3D%27none%27%20stroke%3D%27%2300bcd4%27%20stroke-width%3D%271.5%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.8;
+ }
+ .navbar-blog-link:hover::after {
+  opacity: 1;
+ }

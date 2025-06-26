@@ -48,3 +48,19 @@ Fish_Abbreviations.md:* sr - `ssh appuser@192.168.1.230`
 
 Fish_Abbreviations.md:* sl - `ssh appuser@192.168.1.228`
 ```
+
+### Check size of files in a directory 
+
+```bash
+ls -lh
+```
+Sample Output:
+
+```
+total 3.2G
+-rw-rw-r-- 1 appuser appuser 125K Feb  6 11:27 biology.jpeg
+drwxrwxr-x 6 appuser appuser 4.0K Jun 20 10:10 ImageResize
+-rw-rw-r-- 1 appuser appuser   58 May 21 10:55 path.txt
+-rw-r--r-- 1 appuser appuser 3.2G Jun 25 09:52 data.zip
+-rw-rw-r-- 1 appuser appuser 145K Jun  2 14:54 screenshot.png
+```
