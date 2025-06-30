@@ -12,6 +12,8 @@ Some of the best features of Fish shell are Autosuggestions, Syntax Highlighting
 
 ## Abbreviations
 
+It can be added at `/home/username/.config/fish/config.fish` (This is created as separate file for me)
+
 ### General Commands
 
 * s - `sudo`
@@ -19,6 +21,8 @@ Some of the best features of Fish shell are Autosuggestions, Syntax Highlighting
 * upd - `sudo apt-get update`
 
 * upg - `sudo apt-get upgrade`
+
+* c - `clear`
 
 ---
 

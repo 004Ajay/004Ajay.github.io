@@ -4,6 +4,10 @@ title: Docker
 sidebar_label: Docker
 ---
 
+![Docker Process](Images/Docker%20Process.jpg)
+
+Docker Process (from _https://www.youtube.com/watch?v=oGPjzCBZGzg_)
+
 ### 1. List all docker containers (with their status)
 
 ```bash
@@ -62,3 +66,15 @@ Example: `sudo docker rmi -f anaconda/conda:cpu`
 ```bash
 sudo docker exec -it <container_id> /bin/bash
 ```
+
+Example: ```sudo docker exec -it ffc5b597096e /bin/bash```
+
+<br />
+
+### 7. Save a docker image as zipped file
+```bash
+docker save -o <tar_filename.tar> <image_name:tag>
+```
+    
+Example
+	`docker save -o ollama.tar ollama/ollama:latest`
