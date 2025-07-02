@@ -6,4 +6,6 @@ sidebar_position: 1
 
 Landing page of different type of documents, for example
 
-<!-- > [Commands](/docs/category/commands)  -->
+> [Commands](/docs/category/commands) 
+
+> [Ajay's Resume](/ajay-resume)

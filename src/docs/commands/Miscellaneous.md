@@ -33,7 +33,7 @@ Use `grep -Ri "search_term"`
 * `R` - recursive
 * `i` - ignore case
 
-Example: `grep -R "ssh"`
+Example: `grep -Ri "ssh"`
 
 output:
 
