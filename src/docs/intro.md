@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Documents
 
-Landing page of different type of documents, for example
+Landing page of different type of documents
 
 > [Commands](/docs/category/commands) 
 

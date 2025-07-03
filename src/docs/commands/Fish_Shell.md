@@ -18,11 +18,13 @@ It can be added at `/home/username/.config/fish/config.fish` (This is created as
 
 * s - `sudo`
 
+* c - `clear`
+
+* e - `exit`
+
 * upd - `sudo apt-get update`
 
 * upg - `sudo apt-get upgrade`
-
-* c - `clear`
 
 ---
 

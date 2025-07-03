@@ -1,6 +1,8 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -36,16 +38,39 @@ const config: Config = {
     locales: ['en'],
   },
 
+  // === START: Plugin Configuration for docusaurus-plugin-search-local ===
+  plugins: [
+    // This is the only plugin entry you should have here if you're just adding search.
+    // Make sure NO OTHER lines (like './src/plugins/no-minify-plugin.js') are present or uncommented here.
+    [
+      require.resolve('docusaurus-plugin-search-local'),
+      {
+        hashed: true, // Whether to use hash in the index file name
+        // language: ['en'], // Languages to support. 'en' for English.
+        indexBlog: true, // Index blog posts
+        indexDocs: true, // Index documentation pages
+        indexPages: true, // Index static pages (like your /resume or /index)
+        docsDir: 'docs', // Docs folder path relative to the site root (usually 'docs')
+        blogDir: 'blog', // Blog folder path relative to the site root (usually 'blog')
+        // If you have pages in 'src/pages' that you want indexed, `indexPages: true` handles it.
+      },
+    ],
+  ],
+  // === END: Plugin Configuration ===
+
   presets: [
     [
       'classic',
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          path: 'docs',
+          remarkPlugins: [remarkMath],
+          rehypePlugins: [rehypeKatex],
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
-            // 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -56,7 +81,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
-            // 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -236,7 +261,13 @@ const config: Config = {
           fill="currentColor"
           class="bi bi-linkedin" viewBox="0 0 16 16">
           <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>`,
-        }
+        },
+        // === ADD THIS SEARCH ITEM ===
+        {
+          type: 'search', // This tells Docusaurus to render the search bar provided by the plugin
+          position: 'right', // You can change this to 'left' if you prefer
+        },
+        // === END OF SEARCH ITEM ===
       ],
     },
     footer: {
@@ -257,6 +288,10 @@ const config: Config = {
                 label: 'Commands',
                 to: '/docs/category/commands',
               },
+              {
+                label: 'About',
+                to: '/docs/category/commands',
+              }
           ],
         },
         {
