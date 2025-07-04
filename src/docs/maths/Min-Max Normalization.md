@@ -6,8 +6,8 @@ sidebar_label: Min-Max Normalization
 
 I was working with some LLMs, and I need to compare a set of LLMs based on metrics like `Latency, GPU Power Usage, Alignment, Similarity, Clarity, and Conciseness` for 9 Open Source LLMs. So I thought `Spider/Radar Chart` would be the best to show the comparison in a single graph. On plotting my data directly I got
 
-image coming soon
-<!-- ![Before Normalizing](imgs/Before_Normalizing.png) -->
+![Before Normalizing](Images/Before_Normalizing.png)
+Before Normalizing
 
 See, the scaling of my data was wrong, as `Alignment to Conciseness` was scaled between 0-10 and the other two has no standard scaling. So I need to bring the `Latency and GPU Power Usage` values between 0 to 10. So the solution was `Min-Max Normalization`.
 
@@ -22,8 +22,8 @@ Min-Max\;Normalization=\left[\frac{(x−min(x))}{(max(x)−min(x))}\right] \time
 \end{gather*}
 $$
 
-image coming soon
-<!-- ![After Normalizing](imgs/After_Normalizing.png) -->
+![After Normalizing](Images/After_Normalizing.png)
+After Normalizing
 
 Now an Example:
 

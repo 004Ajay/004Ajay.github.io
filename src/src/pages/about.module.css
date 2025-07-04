@@ -1,0 +1,233 @@
+.aboutMain {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    color: var(--ifm-font-color-base);
+}
+
+.storySection {
+    margin: 2rem 0;
+}
+
+.dropdownSection {
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.aboutHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.aboutHeaderText {
+  margin-bottom: 0.7rem;
+  text-align: center;
+  color: var(--ifm-font-color-base);
+}
+
+.dropdownButton {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdownButton:hover, .dropdownButton:focus {
+  background: var(--ifm-color-primary-dark);
+  color: var(--ifm-color-primary-lightest);
+}
+
+.chevronIcon {
+  font-size: 1.3rem;
+  transition: transform 0.3s, color 0.2s;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.storyContent {
+    background: var(--ifm-background-surface-color);
+    color: var(--ifm-font-color-base);
+    border-left: 4px solid var(--ifm-color-primary);
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin-top: 0;
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.storyBox {
+    background: var(--ifm-color-primary-lightest);
+    color: var(--ifm-font-color-base);
+    border-left: 4px solid var(--ifm-color-primary);
+    padding: 1.2rem 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    /* align-items: center;
+    justify-content: center; */
+}
+
+.thanksHeading {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.tilesContainer {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.tilesRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.tile {
+    background: var(--ifm-color-primary-lightest);
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 1.5rem 2rem 2.5rem 2rem;
+    min-width: 220px;
+    max-width: 270px;
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.tileLogo {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 0.5rem;
+}
+
+.tileTitle {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--ifm-color-primary);
+}
+
+.tileDesc {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.tileIcons {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0.7rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.tileIcons a {
+  color: var(--ifm-color-primary-dark);
+  transition: color 0.2s;
+}
+.tileIcons a:hover, .tileIcons a:focus {
+  color: var(--ifm-color-primary);
+}
+
+/* --- Useful Links Section --- */
+.usefulLinksHeading {
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+  color: var(--ifm-font-color-base); /* Heading color */
+  text-align: center; /* Center align the heading */
+}
+
+.usefulLinksList {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  text-align: center; /* Center align the text within list items */
+  max-width: 600px; /* Constrain width for readability */
+  margin: 0 auto 3rem auto; /* Center the list block and add bottom margin */
+}
+
+.usefulLinksList li {
+  margin-bottom: 10px;
+  font-size: 1.05em;
+  color: var(--ifm-font-color-base);
+}
+
+.usefulLinksList a {
+  color: var(--ifm-color-primary); /* Link color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.usefulLinksList a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .tilesRow {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tile {
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}
+
+[data-theme='dark'] .tileIcons a {
+  color: var(--ifm-color-primary-lighter);
+}
+[data-theme='dark'] .tileIcons a:hover, [data-theme='dark'] .tileIcons a:focus {
+  color: var(--ifm-color-primary);
+}
+
+[data-theme='dark'] .tile {
+    background: #23272f;
+    color: #fff;
+}
+[data-theme='dark'] .tileTitle {
+    color: var(--ifm-color-primary-light);
+}
+[data-theme='dark'] .tileDesc {
+    color: #e0e0e0;
+}
+[data-theme='dark'] .dropdownButton {
+  background: var(--ifm-color-primary-dark);
+  color: #fff;
+}
+[data-theme='dark'] .dropdownButton:hover, [data-theme='dark'] .dropdownButton:focus {
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-lightest);
+}
+
+.aboutHeader h1 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
