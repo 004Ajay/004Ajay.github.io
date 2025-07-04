@@ -33,15 +33,15 @@
   color: #fff;
   border: none;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  min-width: 48px;
-  min-height: 48px;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   padding: 0;
   font-size: 1.3rem;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
-  margin-bottom: 1rem;
+  margin-bottom: -0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,8 +69,6 @@
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     margin-top: 0;
-    /* align-items: center;
-    justify-content: center; */
 }
 
 .storyBox {
@@ -86,7 +84,7 @@
 }
 
 .thanksHeading {
-    margin-top: 3rem;
+    margin-top: 1rem;
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -159,7 +157,7 @@
 
 /* --- Useful Links Section --- */
 .usefulLinksHeading {
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 1.5rem;
   color: var(--ifm-font-color-base); /* Heading color */
   text-align: center; /* Center align the heading */
@@ -174,7 +172,7 @@
 }
 
 .usefulLinksList li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   font-size: 1.05em;
   color: var(--ifm-font-color-base);
 }
