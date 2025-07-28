@@ -36,7 +36,7 @@ x & \text{if } x \geq 0 \\
 \end{cases}
 $$
 
-Explanation: A small slope (αα) for negative values avoids “dead neurons” in ReLU.
+Explanation: A small slope (α) for negative values avoids “dead neurons” in ReLU.
 
 ## Softmax
 $$

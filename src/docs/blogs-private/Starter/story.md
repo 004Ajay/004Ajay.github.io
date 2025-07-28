@@ -1,0 +1,1 @@
+This is just a starter story in the Blog-Private

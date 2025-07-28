@@ -209,9 +209,43 @@ const config: Config = {
           <path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M15 18a3 3 0 1 0-6 0"/><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><circle cx="12" cy="13" r="2"/></svg>`
         },
         {
+          to: '/docs/category/maths',
+          // label: 'Maths',
+          position: 'right',
+          'aria-label': "Maths",
+          html:`<span title="Maths">
+          <svg xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-diff-icon lucide-diff"><path d="M12 3v14"/><path d="M5 10h14"/><path d="M5 21h14"/></svg>`
+        },
+        {
+          to: '/docs/category/gists',
+          // label: 'Gists',
+          position: 'right',
+          'aria-label': "Gists",
+          html:`<span title="Gists">
+          <svg xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-scroll-text-icon lucide-scroll-text"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></svg>`
+        },
+        {
           href: 'https://sites.google.com/view/004ajay',
           // label: 'Portfolio',
-          position: 'right',
+          position: 'left',
           'aria-label': 'Portfolio Website',
           html:`<span title="Portfolio Website">
           <svg xmlns="http://www.w3.org/2000/svg"
@@ -229,7 +263,7 @@ const config: Config = {
         {
           href: 'https://www.github.com/004Ajay',
           // label: 'GitHub',
-          position: 'right',
+          position: 'left',
           'aria-label': 'GitHub',
           // className: 'navbar-github-link',
           html:`<span title="GitHub">
@@ -248,7 +282,7 @@ const config: Config = {
         {
           href: 'https://medium.com/@ajaytshaju',
           // label: 'Medium',
-          position: 'right',
+          position: 'left',
           'aria-label': 'Medium',
           html:`<span title="Medium">
           <svg xmlns="http://www.w3.org/2000/svg"
@@ -261,7 +295,7 @@ const config: Config = {
         {
           href: 'https://www.linkedin.com/in/ajay-t-shaju/',
           // label: 'LinkedIn',
-          position: 'right',
+          position: 'left',
           'aria-label': 'LinkedIn',
           html:`<span title="LinkedIn">
           <svg xmlns="http://www.w3.org/2000/svg"

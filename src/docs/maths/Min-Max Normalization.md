@@ -18,12 +18,14 @@ Min-Max\;Normalization=\left[\frac{(x−min(x))}{(max(x)−min(x))}\right] \time
 \hspace{-5.3cm} min(x) \; \text{is the minimum value in the data range to be scaled} \\
 \hspace{-5.2cm} max(x) \; \text{is the maximum value in the data range to be scaled} \\
 \hspace{-6cm} new\_min(x) \; \text{is the min value of new scale (0 in [0, 10])} \\
-\hspace{-5.7cm} new\_min(x) \; \text{is the max value of new scale (10 in [0, 10])} \\
+\hspace{-5.7cm} new\_max(x) \; \text{is the max value of new scale (10 in [0, 10])} \\
 \end{gather*}
 $$
 
 ![After Normalizing](Images/After_Normalizing.png)
 After Normalizing
+
+**Note**: Though it seems to be working(clearly plotting all values), just take a look at `gemma3:27b's gpu_power_usage_watts and qwen2.5:3b's latency_sec - they're 0`. This doesn't mean they didn't used gpu or fast answering, but a common error in min-max normalization. There are many solutions - Add a small constant (Additive  to Smoothing) denominator and numerator, Log-Scale Transformation [$X\_log=log(X+1)$, the apply min-max norm to $X\_log$]
 
 Now an Example:
 

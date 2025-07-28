@@ -10,4 +10,6 @@ _Landing page of different type of documents_
 
 > [Commands](/docs/category/commands) 
 
+> [Gists](/docs/category/gists)
+
 > [Maths](/docs/category/maths)

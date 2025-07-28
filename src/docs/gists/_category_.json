@@ -1,0 +1,8 @@
+{
+  "label": "Gists",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Some instruction and code for doing things correctly without wasting time."
+  }
+}

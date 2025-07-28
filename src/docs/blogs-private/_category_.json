@@ -1,8 +1,8 @@
 {
-  "label": "Blogs-Public",
-  "position": 2,
+  "label": "Blogs-Private",
+  "position": 5,
   "link": {
     "type": "generated-index",
-    "description": "Blogs I write and publish publicly."
+    "description": "Blogs I write and publish privately. You can't use any of the content inside this for your personal or commercial use. And I don't encourage you to ask any questions or discuss something with me, related to the content inside publically (means when there are 2 or more people are listening to our conversation). If you think you need to discuss about anything inside, please contact me privately. Still if you want to discuss something publically, it should be with me only, not with anyone else; and it should be useful to people who are listening to our conversation."
   }
 }

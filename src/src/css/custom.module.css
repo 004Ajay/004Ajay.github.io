@@ -1,0 +1,169 @@
+/*
+ * src/css/custom.module.css
+ */
+
+:root {
+  --ifm-color-primary: #fe6d73; /* Red for light mode */
+  --ifm-color-primary-dark: #3ec541;
+  --ifm-color-primary-darker: #0077b6;
+  --ifm-color-primary-darkest: #0088ff;
+  --ifm-color-primary-light: #75b7f0;
+  --ifm-color-primary-lighter: #9dcbf3;
+  --ifm-color-primary-lightest: #f9dede;
+
+  --ifm-background-color: #ffffff;
+  --ifm-text-color: #000000;
+  --ifm-search-bar-background: #f0f0f0;
+  --ifm-suggestion-background: transparent; /* Changed to transparent */
+  --ifm-suggestion-hover-background: transparent; /* Changed to transparent */
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: #3c58c8; /* Blue for dark mode */
+  --ifm-color-primary-dark: #3154df;
+  --ifm-color-primary-darker: #1a39b9;
+  --ifm-color-primary-darkest: #1234ba;
+  --ifm-color-primary-light: #5b79f1;
+  --ifm-color-primary-lighter: #5975e9;
+  --ifm-color-primary-lightest: #ffffff;
+
+  --ifm-background-color: #121212;
+  --ifm-text-color: #ffffff;
+  --ifm-search-bar-background: #2c2c2c;
+  --ifm-suggestion-background: transparent; /* Changed to transparent */
+  --ifm-suggestion-hover-background: transparent; /* Changed to transparent */
+}
+
+/* Base body styles to ensure font and background color */
+body {
+  font-family: 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
+  background-color: var(--ifm-background-color);
+  color: var(--ifm-text-color);
+}
+
+/* Splash Screen Styles */
+.splashScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--ifm-background-color);
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.splashScreenHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.splashInput {
+  width: 80%;
+  max-width: 700px;
+  height: 60px;
+  border: 1px solid var(--ifm-text-color);
+  border-radius: 12px;
+  background-color: transparent;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Main Page Styles */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Adjust to position vertically */
+  padding: 2rem;
+  font-family: 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
+}
+
+/* Header Styles */
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.mainTitle {
+  font-size: 6rem;
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    var(--ifm-color-primary) 20%,
+    var(--ifm-text-color) 40%,
+    var(--ifm-text-color) 60%,
+    var(--ifm-color-primary) 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% center;
+  }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: -10px;
+  color: var(--ifm-text-color);
+}
+
+/* Search Bar Styles */
+.searchBar {
+  width: 80%; /* Increased width */
+  max-width: 800px; /* Increased max-width */
+  height: 40px; /* Reduced height */
+  padding: 0 20px;
+  border-radius: 25px;
+  border: none; /* Removed border */
+  background-color: var(--ifm-search-bar-background);
+  color: var(--ifm-text-color);
+  font-size: 1.2rem;
+  font-family: 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
+  outline: none;
+  transition: box-shadow 0.3s;
+}
+
+.searchBar:focus {
+  box-shadow: 0 0 10px var(--ifm-color-primary);
+}
+
+/* Suggestions Area Styles */
+.suggestionsArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 1.5rem;
+  max-width: 700px;
+}
+
+.suggestionItem {
+  padding: 0; /* Removed padding */
+  border-radius: 0; /* Removed border-radius */
+  background-color: transparent; /* Removed background */
+  color: var(--ifm-text-color);
+  cursor: pointer;
+  transition: color 0.3s, transform 0.2s; /* Changed transition */
+  font-size: 0.9rem;
+  border: none;
+  font-family: 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
+  font-style: italic; /* Added italic style */
+}
+
+.suggestionItem:hover {
+  color: var(--ifm-color-primary); /* Changed hover effect */
+  transform: translateY(-2px);
+}
