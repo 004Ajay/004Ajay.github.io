@@ -4,6 +4,8 @@ title: Markdown Highlights
 sidebar_label: Markdown Highlights
 ---
 
+Have you seen some github repositories like [this](https://github.com/neo4j-labs/neo4rs?tab=readme-ov-file#implementation-progress), having specially rendered marking that shows some we need to focus. It is called Admonitions, in GitHub it is called GitHub Flavored Markdown(GFM). To implement it, use the codes below.
+
 ```
 > [!NOTE]
 > Highlights information that users should take into account, even when skimming.

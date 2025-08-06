@@ -155,24 +155,6 @@ const config: Config = {
           <path d="M20 7h-3a2 2 0 0 1-2-2V2"/><path d="M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z"/><path d="M3 7.6v12.8A1.6 1.6 0 0 0 4.6 22h9.8"/></svg>`
         },
         {
-          to: '/docs/category/commands',
-          // label: 'Commands',
-          position: 'right',
-          'aria-label': 'Commands',
-          html: `<span title="Commands">
-          <svg xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-square-terminal-icon lucide-square-terminal">
-          <path d="m7 11 2-2-2-2"/><path d="M11 13h4"/><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/></svg>`
-        },
-        {
           to: '/blog',
           // label: 'Blogs',
           position: 'right',
@@ -191,9 +173,27 @@ const config: Config = {
           <path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>`
         },
         {
+          to: '/docs/category/commands',
+          // label: 'Commands',
+          position: 'right',
+          'aria-label': 'Commands',
+          html: `<span title="Commands">
+          <svg xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-square-terminal-icon lucide-square-terminal">
+          <path d="m7 11 2-2-2-2"/><path d="M11 13h4"/><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/></svg>`
+        },
+        {
           to: '/ajay-resume',
           // label: 'Resume',
-          position: 'right',
+          position: 'left',
           'aria-label': "Ajay's Resume",
           html:`<span title="Ajay's Resume">
           <svg xmlns="http://www.w3.org/2000/svg"
@@ -207,23 +207,6 @@ const config: Config = {
           stroke-linejoin="round"
           class="lucide lucide-file-user-icon lucide-file-user">
           <path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M15 18a3 3 0 1 0-6 0"/><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><circle cx="12" cy="13" r="2"/></svg>`
-        },
-        {
-          to: '/docs/category/maths',
-          // label: 'Maths',
-          position: 'right',
-          'aria-label': "Maths",
-          html:`<span title="Maths">
-          <svg xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-diff-icon lucide-diff"><path d="M12 3v14"/><path d="M5 10h14"/><path d="M5 21h14"/></svg>`
         },
         {
           to: '/docs/category/gists',
@@ -241,6 +224,23 @@ const config: Config = {
           stroke-linecap="round"
           stroke-linejoin="round"
           class="lucide lucide-scroll-text-icon lucide-scroll-text"><path d="M15 12h-5"/><path d="M15 8h-5"/><path d="M19 17V5a2 2 0 0 0-2-2H4"/><path d="M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3"/></svg>`
+        },
+        {
+          to: '/docs/category/maths',
+          // label: 'Maths',
+          position: 'right',
+          'aria-label': "Maths",
+          html:`<span title="Maths">
+          <svg xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-diff-icon lucide-diff"><path d="M12 3v14"/><path d="M5 10h14"/><path d="M5 21h14"/></svg>`
         },
         {
           href: 'https://sites.google.com/view/004ajay',

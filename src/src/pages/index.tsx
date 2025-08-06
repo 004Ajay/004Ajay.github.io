@@ -33,7 +33,7 @@ function Home(): JSX.Element {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSplash(false);
-    }, 2500);
+    }, 1000);
 
     const shuffled = [...allSuggestions].sort(() => 0.5 - Math.random());
     setRandomSuggestions(shuffled.slice(0, 3));
@@ -70,7 +70,7 @@ function Home(): JSX.Element {
     >
       {showSplash && (
         <div className={clsx(styles.splashScreen, { [styles.splashScreenHidden]: !showSplash })}>
-          <input type="text" className={styles.splashInput} readOnly />
+          <div className={styles.splashAnimation}></div>
         </div>
       )}
 
