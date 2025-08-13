@@ -1,7 +1,7 @@
 ---
-id: cuDF Pandas
+id: CUDF Pandas
 title: cuDF Pandas
-sidebar_label: cuDF Pandas
+sidebar_label: CUDF Pandas
 ---
 
 ## Run GPU Accelerated Pandas using cuDF

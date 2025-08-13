@@ -104,7 +104,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: 'img/Ajay.jpg',
+    // image: 'img/Ajay.jpg',
     docs: {
       sidebar: {
         hideable: true,
@@ -363,7 +363,7 @@ const config: Config = {
               },
               {
                 label: 'YouTube',
-                href: 'https://www.youtube.com/@Ajaytshaju',
+                href: 'https://www.youtube.com/@004Ajay',
               },
               {
                 label: 'X',
