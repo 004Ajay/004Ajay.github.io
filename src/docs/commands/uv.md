@@ -1,6 +1,6 @@
 ---
-id: UV
-title: UV
+id: uv
+title: uv
 sidebar_label: UV
 ---
 
@@ -59,9 +59,10 @@ uv self version
 
 Display uv's version
 
+```bash
 ajay@ajay:~/Desktop/Ajay/uv_cmds$ uv self version
 uv 0.8.5
-
+```
 ---
 
 ## uv venv
