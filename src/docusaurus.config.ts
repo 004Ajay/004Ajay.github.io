@@ -112,10 +112,7 @@ const config: Config = {
     },
     navbar: {
       title: 'Ajay T Shaju',
-      logo: {
-        alt: 'My Site Logo',
-        src: 'img/AJ.ico',
-      },
+      
       items: [
         {
           to: '/',

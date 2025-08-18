@@ -204,6 +204,14 @@ Example: `docker logs -f $(docker ps -q -f name=open-webui)` or `docker logs ope
 
 <br />
 
+### Docker prune
+
+Delete all `Exited` & `Created` Containers
+
+```
+docker container prune -f
+```
+
 ---
 
 ## Docker Compose

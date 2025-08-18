@@ -22,6 +22,10 @@ It can be added at `/home/username/.config/fish/config.fish` (This is created as
 
 * e - `exit`
 
+* d - `docker`
+
+* hg - `history | grep`
+
 * upd - `sudo apt-get update`
 
 * upg - `sudo apt-get upgrade`
@@ -54,17 +58,25 @@ It can be added at `/home/username/.config/fish/config.fish` (This is created as
 
 ### Docker Commands
 
-* dps - `sudo docker ps`
+* dps - `docker ps`
 
-* di - `sudo docker images`
+* di - `docker images`
 
-* dex - `sudo docker exec -it`
+* dex - `docker exec -it`
 
-* ds - `sudo docker stop`
+* dst - `docker start`
 
-* dr - `sudo docker rm`
+* ds - `docker stop`
 
-* dri - `sudo docker rmi`
+* dc - `docker compose`
+
+* dv - `docker volume`
+
+* dl - `docker logs`
+
+* drm - `docker rm`
+
+* drmi - `docker rmi`
 
 ---
 
@@ -91,7 +103,26 @@ It can be added at `/home/username/.config/fish/config.fish` (This is created as
 
 ---
 
+### UV Commands 
+
+* ui - `uv init`
+
+* ua - `uv add`
+
+* ur - `uv remove`
+
+* up - `uv pip`
+
+* upl - `uv pip list`
+
+* usv - `uv self version`
+
+* ut - `uv tree`
+
+---
+
 ### Jupyter Commands
+
 * jn - `jupyter notebook`
 
 * jns - `jupyter notebook --ip 192.168.1.229 --port 8887 --no-browser`
