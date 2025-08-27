@@ -89,5 +89,5 @@ find ./seq/ -mindepth 1 -maxdepth 1 -print0 | parallel -0 -j "$(nproc)" rm -rf
 #### Or hardcode after executing `nproc` in terminal:
 
 ```bash
-	... | parallel -0 -j 96 rm -rf
+... | parallel -0 -j 96 rm -rf
 ```

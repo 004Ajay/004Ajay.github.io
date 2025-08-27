@@ -1,7 +1,7 @@
 ---
 id: ollama_model_copier
-title: Copy Ollama Models
-sidebar_label: Copy Ollama Models
+title: Ollama Model Copier
+sidebar_label: Ollama Model Copier
 ---
 
 ### Copy Ollama Model to another computer in the same network (Linux)

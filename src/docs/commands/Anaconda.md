@@ -70,4 +70,4 @@ conda env create -f <filename>.yml -n <env_name>
 
 ### 7. Skip prompts
 
-Commands such as conda create may ask for permission, which can be accepted by typing `y / yes` in terminal, this can be bypassed by passing the `-y` flag 
+Commands such as conda create may ask for permission, which can be accepted by typing `y / yes` in terminal, this can be bypassed by passing the `-y` flag

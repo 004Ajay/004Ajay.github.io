@@ -18,9 +18,7 @@ export default function About() {
         <div className={styles.aboutHeader}>
           <h1>About This Website</h1>
           <div className={styles.aboutHeaderText}>
-            This website (<a href="https://004ajay.github.io" target="_blank" rel="noopener noreferrer">https://004ajay.github.io</a>) is where I test my web design and development skills as a programmer. I'm incredibly grateful to all the people who create free and open-source frameworks.
-            <br />
-            Since I frequently do tests here, you can expect newer things most of the time.
+            This website (<a href="https://004ajay.github.io" target="_blank" rel="noopener noreferrer">https://004ajay.github.io</a>) is where I test my web design and development skills as a programmer. I'm incredibly grateful to all the people who create free and open-source frameworks. Since I frequently test new things here, you can ex dopect ss most of the time.
           </div>
           <button
             className={styles.dropdownButton}
@@ -51,9 +49,9 @@ export default function About() {
             {/* Write your story here! */}
             I've also set up a separate webpage on Google Sites (<a href="https://sites.google.com/view/004ajay" target="_blank" rel="noopener noreferrer">https://sites.google.com/view/004ajay</a>) for my academic and work-related content. Initially, I considered "vibe-coding" a complete website from scratch, but my requirements quickly grew too complex for that approach—it felt like I was trying to build a new framework myself!
             <br />
-            While browsing GitHub repositories, I discovered Docusaurus. I was impressed by its capabilities and the examples of other sites built using it, which convinced me it was the perfect framework for my personal website.
+            While Browse GitHub repositories, I discovered Docusaurus. I was very impressed by its capabilitwasthe examples of other sites built using it, which convinced me it was the perfect framework for my personal website. I plan to add many more features .
             <br />
-            I plan to add many more features to this site in the future, so keep watching for updates!
+             this site in the future, so keep watching for updates!
           </div>
         </div>
         <h2 className={styles.thanksHeading}>Thanks</h2>

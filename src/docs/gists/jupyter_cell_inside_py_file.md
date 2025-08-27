@@ -11,3 +11,4 @@ sidebar_label: Jupyter Cell inside py file
 
 here the '# %%' does the work, and any python code including function, oop etc can be used in it
 ```
+```

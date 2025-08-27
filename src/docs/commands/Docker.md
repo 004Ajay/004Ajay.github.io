@@ -93,7 +93,9 @@ CONTAINER ID   NAME         CPU %    MEM USAGE / LIMIT       MEM %   NET I/O    
 ```bash
 sudo docker rmi -f <image_id>
 ```
-Example: ```sudo docker rmi -f ffc5b597096e```
+Example: ```bash
+sudo docker rmi -f ffc5b597096e
+```
 
 * If an image is not removable due to some errors like
 	
@@ -147,6 +149,49 @@ Example `docker load -i ollama.tar`
 
 <br />
 
+### Docker Image Prune
+
+Before `docker prune`, `docker images` output:
+
+```
+ajay@ajay:~$ docker images
+REPOSITORY                      TAG                  IMAGE ID       CREATED         SIZE
+<none>                          <none>               a395134a60ee   3 hours ago     461MB
+<none>                          <none>               718fe7aef004   3 hours ago     461MB
+<none>                          <none>               c2f8543ff7d0   3 hours ago     461MB
+python                          3.11.13-slim         2ba2e944f9cd   2 weeks ago     125MB
+pipeline                        latest               823b5c57ed73   3 weeks ago     4.01GB
+ghcr.io/open-webui/open-webui   main                 ca42d907c22d   3 weeks ago     4.78GB
+python                          3.11-slim-bookworm   f3bfd8e9386c   2 months ago    130MB
+ubuntu                          latest               a04dc4851cbc   7 months ago    78.1MB
+```
+
+```
+docker image prune -f
+```
+
+```
+ajay@ajay:~$ docker image prune -f 
+Deleted Images:
+deleted: sha256:718fe7aef004f33ca8a89507370bdee3a1c37323a1562fbb0f80e57b23b5e93d
+deleted: sha256:d9db36184582b1f257a4e3b73be9d3db7fa29efb022c767527dd3ed895d9250c
+```
+
+After `docker prune`, `docker images` output:
+
+```
+Total reclaimed space: 1.009GB
+ajay@ajay:~$ docker images
+REPOSITORY                      TAG                  IMAGE ID       CREATED         SIZE
+python                          3.11.13-slim         2ba2e944f9cd   2 weeks ago     125MB
+pipeline                        latest               823b5c57ed73   3 weeks ago     4.01GB
+ghcr.io/open-webui/open-webui   main                 ca42d907c22d   3 weeks ago     4.78GB
+python                          3.11-slim-bookworm   f3bfd8e9386c   2 months ago    130MB
+ubuntu                          latest               a04dc4851cbc   7 months ago    78.1MB
+```
+
+<br />
+
 ---
 
 ## Docker Container
@@ -174,7 +219,9 @@ a839cf0e8ee9   ghcr.io/open-webui/open-webui:main   "bash start.sh"   3 hours ag
 sudo docker exec -it <container_id> /bin/bash
 ```
 
-Example: ```sudo docker exec -it ffc5b597096e /bin/bash```
+Example: ```bash
+sudo docker exec -it ffc5b597096e /bin/bash
+```
 
 Note: There won't be any packages (like nano, vim) installed inside the shell of a docker container
 
@@ -186,7 +233,9 @@ Note: There won't be any packages (like nano, vim) installed inside the shell of
 docker rm -f <container_id>
 ```
 
-Example: ```sudo docker rmi -f c22e695dfda2```
+Example: ```bash
+sudo rmi -f c22e695dfda2
+```
 
 <br />
 
@@ -204,12 +253,26 @@ Example: `docker logs -f $(docker ps -q -f name=open-webui)` or `docker logs ope
 
 <br />
 
-### Docker prune
+### Docker Container Prune
 
 Delete all `Exited` & `Created` Containers
 
+Before `docker prune`, `docker ps -a` output:
+
+```
+CONTAINER ID   IMAGE                                COMMAND                  CREATED       STATUS                  PORTS                                                                                          NAMES
+c32f661bce29   file:latest                          "/bin/sh -c 'uvicorn…"   6 days ago    Exited (1) 6 days ago   
+```
+
 ```
 docker container prune -f
+```
+
+After `docker prune`, `docker ps -a` output:
+
+```
+CONTAINER ID   IMAGE                                COMMAND                  CREATED       STATUS                  PORTS                                                                                          NAMES
+c32f661bce29   file:latest                          "/bin/sh -c 'uvicorn…"   6 days ago    Exited (1) 6 days ago   
 ```
 
 ---
