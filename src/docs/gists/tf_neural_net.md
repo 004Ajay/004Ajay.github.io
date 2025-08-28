@@ -4,6 +4,8 @@ title: NeuralNet
 sidebar_label: TF Neural Net
 ---
 
+A sample neural network using TensorFlow.
+
 ```python
 import tensorflow as tf
 

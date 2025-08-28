@@ -4,6 +4,8 @@ title: Zip Extractor Windows
 sidebar_label: Zip Extractor Windows
 ---
 
+PowerShell script that extracts all `.zip` files in a given folder into separate subfolders named after each zip file.
+
 ```bat
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 

@@ -4,6 +4,8 @@ title: GPU Testing Code TF
 sidebar_label: GPU Testing Code TF
 ---
 
+Python code to check if our GPU is visible to our computer and use it in our python code using tensorflow.
+
 ```python
 import tensorflow as tf
 from tensorflow.keras.layers import Dense

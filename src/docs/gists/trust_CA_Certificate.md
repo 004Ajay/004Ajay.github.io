@@ -17,7 +17,7 @@ If you don't want a copy, directly copy the file from source to destination usin
 ## Put the CA file in `ca-certificates` folder
 
 ```bash
-cp CA_Certificate.cer /usr/local/share/ca-certificates/CA_Certificate.crt
+sudo cp CA_Certificate.cer /usr/local/share/ca-certificates/CA_Certificate.crt
 ```
 
 ## Update the ca-certificates
@@ -99,11 +99,17 @@ export REQUESTS_CA_BUNDLE=/etc/ssl/certs/CA_Certificate.pem
 export SSL_CERT_FILE=/etc/ssl/certs/CA_Certificate.pem
 ```
 
+Reload Bash
+
+```bash
+source ~/.bashrc
+```
+
 Fish Shell
 
 * Open the config file
 
-```
+```bash
 nano ~/.config/fish/config.fish
 ```
 
@@ -116,12 +122,14 @@ set -x SSL_CERT_FILE /etc/ssl/certs/CA_Certificate.pem
 
 * Open a new terminal and check 
 
-```
+```bash
 echo $REQUESTS_CA_BUNDLE
 echo $SSL_CERT_FILE
 ```
 
-## Sample Usecase - Docker Image building
+## Sample Usecase
+
+### Docker Image building
 
 Docker will recreates everything similar to a virtual machine while building an image
 
@@ -142,6 +150,22 @@ COPY CA_Certificate.pem /usr/local/share/ca-certificates/CA_Certificate.crt
 
 * Build the docker image 
 
-```docker
+```bash
 docker build -t image_name .
+```
+
+### Docker Compose
+
+Docker Compose may raise SSL issue while trying to pull multiple services. 
+
+```bash
+sudo mkdir -p /etc/docker/certs.d
+```
+
+```bash
+sudo cp /etc/ssl/certs/CA_Certificate.pem /etc/docker/certs.d/docker.io/ca.crt
+```
+
+```bash
+sudo systemctl restart docker
 ```

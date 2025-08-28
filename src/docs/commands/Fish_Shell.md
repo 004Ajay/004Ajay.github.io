@@ -4,7 +4,7 @@ title: Fish Shell
 sidebar_label: Fish Shell
 ---
 
-## Intro
+## Fish Shell Intro
 
 Fish is a terminal similar to Bash (Bourne Again SHell) and Zsh (Z Shell)
 
