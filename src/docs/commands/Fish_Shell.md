@@ -129,6 +129,32 @@ It can be added at `/home/username/.config/fish/config.fish` (This is created as
 
 ---
 
+### Git Commands
+
+* ga - `git add .`
+
+* gc - `git commit -m`
+
+* gph - `git push origin main`
+
+* gpl - `git pull`
+
+* gcl - `git clone`
+
+* gs - `git status`
+
+* gb - `git branch`
+
+* gi - `git init`
+
+* gr - `git revert`
+
+* gst - `git stash`
+
+* gch - `git checkout`
+
+---
+
 ### Ollama Commands
 
 * os - `ollama show`
@@ -150,3 +176,5 @@ It can be added at `/home/username/.config/fish/config.fish` (This is created as
 * fi - `find ./<filename> -type f > <filename>.txt`
 
 * pcopy - `time cat <filename>.txt | parallel -j 10 -X -n 1 rsync -av --inplace {} ./<dest_dir_name>`
+
+* sc - `scp <files> appuser@192.168.1.XXX:/home/appuser/LOCATION`

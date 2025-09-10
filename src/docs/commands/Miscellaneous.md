@@ -64,3 +64,21 @@ drwxrwxr-x 6 appuser appuser 4.0K Jun 20 10:10 ImageResize
 -rw-r--r-- 1 appuser appuser 3.2G Jun 25 09:52 data.zip
 -rw-rw-r-- 1 appuser appuser 145K Jun  2 14:54 screenshot.png
 ```
+
+---
+
+### Check Port details
+
+```bash
+ss -tuln | grep port_number
+```
+
+- **`ss`**:  Utility to dump socket statistics (replaces the older `netstat`).
+
+- **Flags: `-tuln`**
+  - `-t`: Show **TCP** sockets  
+  - `-u`: Show **UDP** sockets  
+  - `-l`: Show **listening** sockets only  
+  - `-n`: Show **numerical** addresses (don’t resolve hostnames/services)
+
+- **`| grep port_number`**: Filters the output to lines containing the specified **port_number**
