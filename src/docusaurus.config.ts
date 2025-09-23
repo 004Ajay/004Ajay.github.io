@@ -43,16 +43,19 @@ const config: Config = {
     // This is the only plugin entry you should have here if you're just adding search.
     // Make sure NO OTHER lines (like './src/plugins/no-minify-plugin.js') are present or uncommented here.
     [
-      require.resolve('docusaurus-plugin-search-local'),
+      require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         hashed: true, // Whether to use hash in the index file name
         // language: ['en'], // Languages to support. 'en' for English.
         indexBlog: true, // Index blog posts
         indexDocs: true, // Index documentation pages
-        indexPages: true, // Index static pages (like your /resume or /index)
+        indexPages: true, // Index static pages (like your /resume or /index, i.e. 'src/pages')
         docsDir: 'docs', // Docs folder path relative to the site root (usually 'docs')
         blogDir: 'blog', // Blog folder path relative to the site root (usually 'blog')
-        // If you have pages in 'src/pages' that you want indexed, `indexPages: true` handles it.
+        highlightSearchTermsOnTargetPage: true,
+        // hideSearchBarWithNoSearchContext: true,
+        // searchBarShortcut: true,
+        // searchBarShortcutKeymap: "/", // Set '/' as the shortcut key to focus on the search bar
       },
     ],
   ],

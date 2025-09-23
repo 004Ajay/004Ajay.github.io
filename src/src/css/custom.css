@@ -68,6 +68,12 @@
   display: none !important;
 }
 
+/* Optional: Hide the search result modal when there's an action, such as clicking outside of the search modal. */
+.DocSearch-Container {
+  /* Set an opacity or other hidden state to keep search functionality */
+  opacity: 0;
+  pointer-events: none;
+}
 
 /* .navbar-github-link {
   &:after {
