@@ -185,10 +185,10 @@ body {
   color: var(--ifm-text-color);
   cursor: pointer;
   transition: color 0.3s, transform 0.2s; /* Changed transition */
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   border: none;
   font-family: 'Consolas', 'Menlo', 'Monaco', 'Courier New', monospace;
-  font-style: italic; /* Added italic style */
+  /* font-style: italic; Added italic style */
 }
 
 .suggestionItem:hover {

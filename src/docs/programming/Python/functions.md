@@ -100,3 +100,58 @@ greet(**kw_args)  # unpacks dict into name=..., age=..., city=...
 Hello, my name is Ajay, I am 23 years old, and I live in Pala.
 Hello, my name is Ajay, I am 23 years old, and I live in Bengaluru.
 ```
+
+---
+
+## Python Object Mutability
+
+```python
+def edit_list(lst):
+    lst.append(4)
+    
+lt = [1,2,3]
+edit_list(lt)
+print(lt) # [1,2,3,4]
+```
+* **Lists are mutable** → their contents can be changed in place.
+* The method `.append(4)` modifies the existing list object.
+* Inside the function, `lst` refers to the same list object as `lt`.
+* So the append operation changes the original list.
+
+```python
+def edit_tuple(tup):
+    tup + (1, 2, 3)
+
+tupl = ("a", "b" , "c")
+edit_tuple(tupl)
+print(tupl) # ("a", "b" , "c")
+```
+
+* **Tuples are immutable** → they cannot be changed in place.
+* The expression `tup + (1, 2, 3)` **creates a new tuple**, but does **not modify** `tup`.
+* We didn't assign or return this new tuple.
+* So the original tuple `tupl` remains unchanged.
+
+```python
+def edit_tuple(tup):
+    return tup + (1, 2, 3)
+
+tupl = ("a", "b" , "c")
+tt = edit_tuple(tupl)
+print(tt) # ('a', 'b', 'c', 1, 2, 3)
+```
+* `tup + (1, 2, 3)` produces a new tuple.
+* This time, we `return` it.
+* We assigned that new tuple to `tt`, thus it contains the new expanded tuple.
+
+⭐ Big idea
+
+**Mutable objects (list, dict, set) change in place:**
+
+* modifying them inside a function **affects the original object**.
+
+**Immutable objects (tuple, str, int, float, bool) cannot change:**
+
+* operations like `+`, `.replace()`, etc. **create new objects**.
+
+* if you don’t assign or return the new object → original stays unchanged.

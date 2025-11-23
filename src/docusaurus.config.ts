@@ -191,6 +191,24 @@ const config: Config = {
           <path d="m7 11 2-2-2-2"/><path d="M11 13h4"/><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/></svg>`
         },
         {
+          to: '/docs/category/programming',
+          // label: 'Programming',
+          position: 'right',
+          'aria-label': 'Programming',
+          html: `<span title="Programming">
+          <svg xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="lucide lucide-code-xml-icon lucide-code-xml">
+          <path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>`
+        },
+        {
           to: '/ajay-resume',
           // label: 'Resume',
           position: 'left',

@@ -112,3 +112,19 @@ ollama:
   label: Ollama
   permalink: /ollama
   description: Ollama tag description        
+
+updating:
+  label: Updating
+  permalink: /updating
+  description: Updating tag description
+
+mozilla:
+  label: Mozilla
+  permalink: /mozilla
+  description: Mozilla tag description
+
+firefox:
+  label: Firefox
+  permalink: /firefox
+  description: Firefox tag description
+
