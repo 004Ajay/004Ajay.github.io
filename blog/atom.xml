@@ -2,11 +2,56 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://004ajay.github.io/blog</id>
     <title>AJAY Blog</title>
-    <updated>2025-06-22T00:00:00.000Z</updated>
+    <updated>2025-11-21T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://004ajay.github.io/blog"/>
     <subtitle>AJAY Blog</subtitle>
     <icon>https://004ajay.github.io/img/AJ.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Updating Mozilla Firefox on Linux | not with apt or snap]]></title>
+        <id>https://004ajay.github.io/blog/updating-mozilla-linux</id>
+        <link href="https://004ajay.github.io/blog/updating-mozilla-linux"/>
+        <updated>2025-11-21T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Read on Medium]]></summary>
+        <content type="html"><![CDATA[<p>Read on <a href="https://medium.com/@ajaytshaju/updating-mozilla-firefox-on-linux-not-with-apt-or-snap-4e1218a1927e" target="_blank" rel="noopener noreferrer" class="">Medium</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="updating-mozilla-firefox-on-linux--not-with-apt-or-snap">Updating Mozilla Firefox on Linux | not with apt or snap<a href="https://004ajay.github.io/blog/updating-mozilla-linux#updating-mozilla-firefox-on-linux--not-with-apt-or-snap" class="hash-link" aria-label="Direct link to Updating Mozilla Firefox on Linux | not with apt or snap" title="Direct link to Updating Mozilla Firefox on Linux | not with apt or snap" translate="no">​</a></h2>
+<p>Recently I installed Mozilla Firefox on my Windows to test how a website works in different browsers. Even though my aim was to test the website, it turned into testing the newly installed Mozilla Firefox. I'm using Mozilla Firefox as my default browser at work because it comes as the default browser in Linux, and it feels heroic using Mozilla (running cmds like <code>firefox --version</code>, <code>firefox google.com</code>) after using Google Chrome everywhere.</p>
+<p><img decoding="async" loading="lazy" alt="Firefox" src="https://004ajay.github.io/assets/images/firefox-17d0bce067c1b92c4f1b9501ee922a36.webp" width="1100" height="741" class="img_ev3q">
+Photo by <a href="https://unsplash.com/@rubaitulazad?utm_source=medium&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer" class="">Rubaitul Azad</a> on <a href="https://unsplash.com/?utm_source=medium&amp;utm_medium=referral" target="_blank" rel="noopener noreferrer" class="">Unsplash</a></p>
+<p>Honestly, the new Firefox on my Windows feels like a Ferrari, but on my Linux it feels like a Maruti 800. Basically, I was using version 136 on Linux, and the latest one was 145. The very next workday I blindly executed the commands <code>sudo snap refresh firefox</code> &amp; <code>snap list | grep firefox</code> — didn’t work — then <code>sudo apt update firefox</code> &amp; <code>sudo apt list --installed | grep mozilla</code> — didn’t work either. Then I got my consciousness back and realized Firefox was not installed using a package manager.</p>
+<p>So I quickly checked <code>which firefox</code>, which showed me the softlink <code>/usr/bin/firefox</code>, then found the path to Firefox executable binary (<code>/lib/...</code> in <code>/usr/bin/firefox -&gt; /lib/firefox/firefox*</code>) using <code>ll /usr/bin/firefox</code>. Keeping this path not in the mind but in the terminal, I opened Firefox to download the latest version of Firefox for Linux. From here onward a gush of Linux terminal commands came to my mind. What I wanted to do was: create a backup of my current profile, windows, and tabs; create a backup of the whole Firefox folder; locate and extract the downloaded package; move the extracted stuff to the location pointed to by the hard link; check if Firefox can be invoked using the terminal; and if not, fix the softlink. (If you are a Linux guy, just think of all the commands.)</p>
+<p>Now to the keyboard:</p>
+<ol>
+<li class="">
+<p>Killed all the running processes of firefox using <code>kill -9 firefox</code>.</p>
+</li>
+<li class="">
+<p>Located (<code>cd /lib/firefox/</code> and <code>ls</code>) and created the backups of firefox main files using <code>sudo mv /lib/firefox /lib/firefox-old</code>.</p>
+</li>
+<li class="">
+<p>Located and created the backups using <code>cp -rv ~/.mozilla/firefox ~/.mozilla/firefox.backup</code> since profile info was stored in <code>.mozilla</code> directory in the home directory.</p>
+</li>
+<li class="">
+<p>Located and extracted the downloaded package using <code>tar -xvf firefox-145.0.tar.xz</code>. Moved (<code>sudo mv firefox/ /lib/firefox</code>) the extracted files to the <code>/lib/..</code> dir.</p>
+</li>
+<li class="">
+<p>Checked if the newly installed Firefox was working or not (command: <code>firefox</code>). It was not working. So I again checked <code>which firefox</code>, which was soft-linking a shell script (<code>.sh</code> file), but my new installation didn’t have a shell script. Fixed the softlink using <code>sudo ln -sf /lib/firefox/firefox /usr/bin/firefox</code></p>
+</li>
+</ol>
+<p>With this done, Firefox was working — but my windows, tabs, and everything were missing. So I killed all the processes of firefox again and</p>
+<ol start="5">
+<li class="">Went to the previously backed-up files and copied the profile JSON <code>cp ~/.mozilla/firefox.backup/wzhpg0kg.default-release/sessionstore-backups/recovery.jsonlz4 ~/.mozilla/firefox/wzhpg0kg.default-release/sessionstore.jsonlz4</code>. After this when I opened Firefox, it showed a 'Restore Session' button on the opening tab, through which I got all my windows and tabs back.</li>
+</ol>
+<p>That's it. Thank you!</p>]]></content>
+        <author>
+            <name>Ajay T Shaju</name>
+            <uri>https://004ajay.github.io/</uri>
+        </author>
+        <category label="Updating" term="Updating"/>
+        <category label="Mozilla" term="Mozilla"/>
+        <category label="Firefox" term="Firefox"/>
+        <category label="Linux" term="Linux"/>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Setting up Nvidia Drivers for GPU access on Ubuntu]]></title>
         <id>https://004ajay.github.io/blog/nvidia-drivers</id>
