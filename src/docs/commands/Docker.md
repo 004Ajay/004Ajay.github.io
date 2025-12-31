@@ -286,3 +286,39 @@ Think like you have a dockerfile like the [one above](/docs/commands/Docker#dock
 ### `--build` option in docker compose
 
 A command like `docker compose up --build` will rebuild new images whenever you run this command. Without the `--build`, the docker will reuse the old image, where your new changes are not reflected.
+
+
+---
+
+## Issues and Solutions
+
+### Make docker work without sudo - Linux
+
+Quickly follow [these](https://docs.docker.com/engine/install/linux-postinstall/#configure-default-logging-driver) steps to make docker work without sudo. I am showing the same commands only
+
+1. Create the docker group
+
+```bash
+sudo groupadd docker
+```
+
+2. Add your user to the docker group.
+
+```bash
+sudo usermod -aG docker $USER
+```
+
+3. Activate the changes to groups:
+
+```bash
+newgrp docker
+```
+
+4. Verify docker commands without sudo.
+
+```bash
+docker run hello-world
+```
+
+
+`Log out and log back in` to re-evaluate group membership. If this doesn't work, try running all these commands again and doing a `sudo reboot now`.
