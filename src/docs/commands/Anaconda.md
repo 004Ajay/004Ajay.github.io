@@ -71,3 +71,33 @@ conda env create -f <filename>.yml -n <env_name>
 ### 7. Skip prompts
 
 Commands such as conda create may ask for permission, which can be accepted by typing `y / yes` in terminal, this can be bypassed by passing the `-y` flag
+
+---
+
+### Run conda in normal command prompt
+
+In Windows, Conda works in the Anaconda Prompt, but not in normal command prompt 
+
+_This is because anaconda prompt runs an initialization script before opening the shell. Regular cmd.exe does not know where Conda is installed._
+
+Open Anaconda Prompt and run:
+
+```bash
+conda init cmd.exe
+```
+
+Then close all terminals and reopen cmd.
+
+Now run:
+
+```bash
+conda activate
+```
+
+By now all conda commands should work
+
+Run a test command:
+
+```bash
+conda activate myenv
+```
