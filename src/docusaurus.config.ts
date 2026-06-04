@@ -154,24 +154,24 @@ const config: Config = {
           class="lucide lucide-files-icon lucide-files">
           <path d="M20 7h-3a2 2 0 0 1-2-2V2"/><path d="M9 18a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h7l4 4v10a2 2 0 0 1-2 2Z"/><path d="M3 7.6v12.8A1.6 1.6 0 0 0 4.6 22h9.8"/></svg>`
         },
-        {
-          to: '/blog',
-          // label: 'Blogs',
-          position: 'right',
-          'aria-label': 'Blogs',
-          html:`<span title="Blogs">
-          <svg xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-rss-icon lucide-rss">
-          <path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>`
-        },
+        // {
+        //   to: '/blog',
+        //   // label: 'Blogs',
+        //   position: 'right',
+        //   'aria-label': 'Blogs',
+        //   html:`<span title="Blogs">
+        //   <svg xmlns="http://www.w3.org/2000/svg"
+        //   width="20"
+        //   height="20"
+        //   viewBox="0 0 24 24"
+        //   fill="none"
+        //   stroke="currentColor"
+        //   stroke-width="2"
+        //   stroke-linecap="round"
+        //   stroke-linejoin="round"
+        //   class="lucide lucide-rss-icon lucide-rss">
+        //   <path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>`
+        // },
         {
           to: '/docs/category/commands',
           // label: 'Commands',
@@ -341,10 +341,10 @@ const config: Config = {
                 label: 'Docs',
                 to: '/docs/intro',
               },
-              {
-                label: 'Blogs',
-                to: '/blog',
-              },
+              // {
+              //   label: 'Blogs',
+              //   to: '/blog',
+              // },
               {
                 label: 'Commands',
                 to: '/docs/category/commands',

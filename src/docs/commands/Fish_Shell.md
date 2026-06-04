@@ -6,7 +6,7 @@ sidebar_label: Fish Shell
 
 ## Fish Shell Intro
 
-Fish Shell Blog → [website](https://004ajay.github.io/blog/bash-to-fish/) | [medium](https://medium.com/@ajaytshaju/bash-to-fish-a-terminal-change-775e577608cc)
+Fish Shell Blog: [medium](https://medium.com/@ajaytshaju/bash-to-fish-a-terminal-change-775e577608cc)
 
 Fish is a terminal similar to Bash (Bourne Again SHell) and Zsh (Z Shell)
 

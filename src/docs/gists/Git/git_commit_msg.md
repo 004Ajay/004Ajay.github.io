@@ -4,6 +4,25 @@ title: Git Commit Message
 sidebar_label: Git Commit Message
 ---
 
+Conventional Commit types used in git commit messages:
+
+* `feat:` A new feature
+* `fix:` A bug fix
+* `docs:` Documentation only changes
+* `style:` Changes that do not affect meaning (whitespace, formatting, etc.)
+* `refactor:` Code change that neither fixes a bug nor adds a feature
+* `perf:` A code change that improves performance
+* `test:` Adding or correcting tests
+* `chore:` Other changes that don’t modify src or test files (build, tooling, etc.)
+* `build:` Changes that affect the build system or dependencies
+* `ci:` Changes to CI configuration files and scripts
+* `revert:` Reverts a previous commit
+ 
+
+These help automate changelogs and make commit history clearer.
+
+---
+
 Here are some common keywords and what they indicate:
 
 **FEAT: Use this keyword to indicate that you are committing to a new feature.**

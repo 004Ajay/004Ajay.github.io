@@ -4,7 +4,7 @@ title: Install Python Packages Offline (Windows)
 sidebar_label: Install Python Packages Offline (Windows)
 ---
 
-> This assumes you have installed the Python (eg, 3.11.11) in the destination Offline computer. Also the python version has to be same in both the computers (where you dowload the packages and where you install them).
+> This assumes you have installed the Python (eg, 3.11.11) in the destination Offline computer. Also the python version has to be same in both the computers (where you download the packages and where you install them).
 
 ## Prerequisites / To Do
 
