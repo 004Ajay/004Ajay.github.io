@@ -41,7 +41,7 @@ sudo docker ps -a
 sudo docker stop <container_id/name>
 ```
 
-Example: ```sudo docker stop 13800bf6b9a1```
+Example: `sudo docker stop 13800bf6b9a1`
 
 <br />
 
@@ -51,7 +51,7 @@ Example: ```sudo docker stop 13800bf6b9a1```
 sudo docker rm -f <container_id/name_with_tag>
 ```
 
-Example: ```sudo docker rm -f open-webui:cuda```
+Example: `sudo docker rm -f open-webui:cuda`
 
 <br />
 

@@ -12,7 +12,7 @@ sidebar_label: Lightning Fast
 tar -I pigz -cvf archive_name.tar.gz ./folder/or/file/to/be/archived
 ```
 
-Example command: ```tar -I pigz -cvf V_archive.tar.gz ./Our_Backup```
+Example command: `tar -I pigz -cvf V_archive.tar.gz ./Our_Backup`
 	
 * `tar` => standard archiving utility that bundles files into one file (usually with a .tar extension).
 	
@@ -37,14 +37,14 @@ Example command: ```tar -I pigz -cvf V_archive.tar.gz ./Our_Backup```
 dd if=<path_of_current_file_to_be_copied> of=<path_of_destination> bs=64M iflag=direct oflag=direct status=progress
 ```
 
-Example: ```dd if=./archive.tar.gz of=/user/Ajay/Backups bs=64M iflag=direct oflag=direct status=progress```
+Example: `dd if=./archive.tar.gz of=/user/Ajay/Backups bs=64M iflag=direct oflag=direct status=progress`
 		
 Output:	
 
-	369574572157 bytes (370 GB, 344 GiB) copied, 28118 s, 13.1 MB/s
-	5507+1 records in
-	5507+1 records out
-	369574572157 bytes (370 GB, 344 GiB) copied, 28118.3 s, 13.1 MB/s
+> 369574572157 bytes (370 GB, 344 GiB) copied, 28118 s, 13.1 MB/s
+> 5507+1 records in
+> 5507+1 records out
+> 369574572157 bytes (370 GB, 344 GiB) copied, 28118.3 s, 13.1 MB/s
 
 ---
 
@@ -60,7 +60,7 @@ Example: `find . -maxdepth 1 -mindepth 1 -name new_BkUp.tar.gz -print0 | paralle
 
 Output:
 		
-	renamed './new_BkUp.tar.gz' -> './Backups/new_BkUp.tar.gz'
+> renamed './new_BkUp.tar.gz' -> './Backups/new_BkUp.tar.gz'
 		
 * Basically it searches the current directory for the file `new_BkUp.tar.gz` and then uses Parallel utility to move files using multiple cores to `Backups` folder 
 
@@ -84,9 +84,9 @@ ls | wc <filename>.<file extension> -l
 
 Example command: `ls | wc all_id_paths.txt -l`
 	
-		Output:
+Output:
 
-		3876693 all_id_paths.txt
+> 3876693 all_id_paths.txt
 
 ---
 

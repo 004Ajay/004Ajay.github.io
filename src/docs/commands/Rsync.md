@@ -14,7 +14,7 @@ sidebar_label: Rsync
 find ./<folder_having_all_the_files_to_be_copied> -type f > <location_with_name_of_text_file>.txt 
 ```
 
-Example command: ```find ./downloaded_files/items_to_move -type f > to_copy.txt```
+Example command: `find ./downloaded_files/items_to_move -type f > to_copy.txt`
 
 <br />
 
@@ -24,7 +24,7 @@ Example command: ```find ./downloaded_files/items_to_move -type f > to_copy.txt`
 time cat <previously_made_text_file>.txt | parallel -j <num_of_cores_to_use> -X -n 1 rsync -av --inplace {} ./<destination_folder_to_copy_the_files>
 ```
 
-Example command: ```time cat to_copy.txt | parallel -j 10 -X -n 1 rsync -av --inplace {} ./Receiver/```
+Example command: `time cat to_copy.txt | parallel -j 10 -X -n 1 rsync -av --inplace {} ./Receiver/`
 
 So you will be doing 
 

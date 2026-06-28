@@ -24,9 +24,7 @@ To put an LLM locally (which works similar to ChatGPT) we need two components - 
 cp -r <curret/path/to/models> <destination/to/store/model/files>
 ```
 
-* Example command: ```bash
-cp -r /mnt/INTERNAL/Ollama/.ollama /home/appuser/Ollama/.ollama
-```
+* Example command: ``cp -r /mnt/INTERNAL/Ollama/.ollama /home/appuser/Ollama/.ollama`
 
 <br />
 

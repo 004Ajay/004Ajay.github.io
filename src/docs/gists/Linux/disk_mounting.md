@@ -96,7 +96,7 @@ sudo mount -a
 
 If there are no errors, the configuration is correct.
 
-> I got an error here `mount: /mnt/somemountpoint: special device LABEL=xyz does not exist.`, through which I found the step [Get UUID or Label of the Partition](/docs/gists/disk_mounting#get-uuid-or-label-of-the-partition)
+> I got an error here `mount: /mnt/somemountpoint: special device LABEL=xyz does not exist.`, through which I found the step [Get UUID or Label of the Partition](/docs/gists/Linux/disk_mounting#get-uuid-or-label-of-the-partition)
 
 
 ---

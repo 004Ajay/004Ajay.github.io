@@ -93,9 +93,7 @@ CONTAINER ID   NAME         CPU %    MEM USAGE / LIMIT       MEM %   NET I/O    
 ```bash
 sudo docker rmi -f <image_id>
 ```
-Example: ```bash
-sudo docker rmi -f ffc5b597096e
-```
+Example: `sudo docker rmi -f ffc5b597096e`
 
 * If an image is not removable due to some errors like
 	
@@ -219,9 +217,7 @@ a839cf0e8ee9   ghcr.io/open-webui/open-webui:main   "bash start.sh"   3 hours ag
 sudo docker exec -it <container_id> /bin/bash
 ```
 
-Example: ```bash
-sudo docker exec -it ffc5b597096e /bin/bash
-```
+Example: `sudo docker exec -it ffc5b597096e /bin/bash`
 
 Note: There won't be any packages (like nano, vim) installed inside the shell of a docker container
 
@@ -233,9 +229,7 @@ Note: There won't be any packages (like nano, vim) installed inside the shell of
 docker rm -f <container_id>
 ```
 
-Example: ```bash
-sudo rmi -f c22e695dfda2
-```
+Example: `sudo rmi -f c22e695dfda2`
 
 <br />
 

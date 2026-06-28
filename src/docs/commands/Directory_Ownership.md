@@ -32,11 +32,8 @@ Output: `drwxrwxrwx +4 appuser appuser 4096 Feb 6 10:24 ./`
 sudo chown <new owner>:<new owner> ./path/to/a/file/or/dir>
 ```
 
-Example:
+Example: `sudo chown app:app ./`
 
-```bash
-sudo chown app:app ./
-```
 * Now user and group is app
 
 <br />

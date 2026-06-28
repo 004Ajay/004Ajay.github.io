@@ -10,7 +10,7 @@ sidebar_label: Zipping
 tar -I pigz -cvf archive_name.tar.gz ./folder/or/file/to/be/archived
 ```
 
-Example command: ```tar -I pigz -cvf V_archive.tar.gz ./Our_Backup```
+Example command: `tar -I pigz -cvf V_archive.tar.gz ./Our_Backup`
 	
 * `tar` => standard archiving utility that bundles files into one file (usually with a .tar extension).
 	
@@ -33,7 +33,7 @@ Example command: ```tar -I pigz -cvf V_archive.tar.gz ./Our_Backup```
 zip -R9v <zip_filename>.zip <output_filename>
 ```
 
-Example: ```zip -R9v Ajay_Archived.zip Ajay_Data```
+Example: `zip -R9v Ajay_Archived.zip Ajay_Data`
 
 * `R` => Recursive: zip will go through all child directories in the main directory to zip them all
 
