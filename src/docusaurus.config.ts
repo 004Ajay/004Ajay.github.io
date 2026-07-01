@@ -8,7 +8,7 @@ import rehypeKatex from 'rehype-katex';
 
 const config: Config = {
   title: 'AJAY',
-  tagline: 'Personal Website',
+  tagline: '',
   favicon: 'img/AJ.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -28,7 +28,12 @@ const config: Config = {
   projectName: '004Ajay', // Usually your repo name.
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
+  // onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
@@ -114,9 +119,15 @@ const config: Config = {
       },
     },
     navbar: {
-      title: 'Ajay T Shaju',
+      title: '',
       
       items: [
+        {
+          // show name explicitly on left
+          to: '/',
+          html: `<span class="navbar-name">AJAY T SHAJU</span>`,
+          position: 'left',
+        },
         {
           to: '/',
           position: 'right',
@@ -209,24 +220,6 @@ const config: Config = {
           <path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>`
         },
         {
-          to: '/ajay-resume',
-          // label: 'Resume',
-          position: 'left',
-          'aria-label': "Ajay's Resume",
-          html:`<span title="Ajay's Resume">
-          <svg xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-file-user-icon lucide-file-user">
-          <path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M15 18a3 3 0 1 0-6 0"/><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7z"/><circle cx="12" cy="13" r="2"/></svg>`
-        },
-        {
           to: '/docs/category/gists',
           // label: 'Gists',
           position: 'right',
@@ -260,69 +253,7 @@ const config: Config = {
           stroke-linejoin="round"
           class="lucide lucide-diff-icon lucide-diff"><path d="M12 3v14"/><path d="M5 10h14"/><path d="M5 21h14"/></svg>`
         },
-        {
-          href: 'https://sites.google.com/view/004ajay',
-          // label: 'Portfolio',
-          position: 'left',
-          'aria-label': 'Portfolio Website',
-          html:`<span title="Portfolio Website">
-          <svg xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-globe-icon lucide-globe">
-          <circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>`,
-        },
-        {
-          href: 'https://www.github.com/004Ajay',
-          // label: 'GitHub',
-          position: 'left',
-          'aria-label': 'GitHub',
-          // className: 'navbar-github-link',
-          html:`<span title="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="lucide lucide-github-icon lucide-github">
-          <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>`
-        },
-        {
-          href: 'https://medium.com/@ajaytshaju',
-          // label: 'Medium',
-          position: 'left',
-          'aria-label': 'Medium',
-          html:`<span title="Medium">
-          <svg xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="currentColor"
-          class="bi bi-medium" viewBox="0 0 16 16">
-          <path d="M9.025 8c0 2.485-2.02 4.5-4.513 4.5A4.506 4.506 0 0 1 0 8c0-2.486 2.02-4.5 4.512-4.5A4.506 4.506 0 0 1 9.025 8m4.95 0c0 2.34-1.01 4.236-2.256 4.236S9.463 10.339 9.463 8c0-2.34 1.01-4.236 2.256-4.236S13.975 5.661 13.975 8M16 8c0 2.096-.355 3.795-.794 3.795-.438 0-.793-1.7-.793-3.795 0-2.096.355-3.795.794-3.795.438 0 .793 1.699.793 3.795"/></svg>`,
-        },
-        {
-          href: 'https://www.linkedin.com/in/ajay-t-shaju/',
-          // label: 'LinkedIn',
-          position: 'left',
-          'aria-label': 'LinkedIn',
-          html:`<span title="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          height="20"
-          fill="currentColor"
-          class="bi bi-linkedin" viewBox="0 0 16 16">
-          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>`,
-        },
+        // moved social/resume links out of navbar and into footer (Info)
         // === ADD THIS SEARCH ITEM ===
         {
           type: 'search', // This tells Docusaurus to render the search bar provided by the plugin
@@ -334,6 +265,31 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
+        {
+          title: 'Info',
+          items: [
+            {
+              label: "Resume",
+              to: '/ajay-resume',
+            },
+            {
+              label: 'Portfolio Website',
+              href: 'https://sites.google.com/view/004ajay',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/004Ajay',
+            },
+            {
+              label: 'Medium',
+              href: 'https://medium.com/@ajaytshaju',
+            },
+            {
+              label: 'LinkedIn',
+              href: 'https://www.linkedin.com/in/ajay-t-shaju/',
+            },
+          ],
+        },
         {
           title: 'Contents',
           items: [

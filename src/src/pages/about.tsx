@@ -18,7 +18,7 @@ export default function About() {
         <div className={styles.aboutHeader}>
           <h1>About This Website</h1>
           <div className={styles.aboutHeaderText}>
-            This website (<a href="https://004ajay.github.io" target="_blank" rel="noopener noreferrer">https://004ajay.github.io</a>) is where I test my web design and development skills as a programmer. I'm incredibly grateful to all the people who create free and open-source frameworks. Since I frequently test new things here, you can ex dopect ss most of the time.
+            This website (<a href="https://004ajay.github.io" target="_blank" rel="noopener noreferrer">https://004ajay.github.io</a>) is where I test my web design and development skills as a programmer. I'm incredibly grateful to all the people who create free and open-source frameworks.
           </div>
           <button
             className={styles.dropdownButton}
@@ -47,11 +47,12 @@ export default function About() {
             aria-hidden={!isOpen}
           >
             {/* Write your story here! */}
-            I've also set up a separate webpage on Google Sites (<a href="https://sites.google.com/view/004ajay" target="_blank" rel="noopener noreferrer">https://sites.google.com/view/004ajay</a>) for my academic and work-related content. Initially, I considered "vibe-coding" a complete website from scratch, but my requirements quickly grew too complex for that approach—it felt like I was trying to build a new framework myself!
+            I have a webpage on Google Sites (<a href="https://sites.google.com/view/004ajay" target="_blank" rel="noopener noreferrer">https://sites.google.com/view/004ajay</a>) where I share my academic and work-related content.
             <br />
-            While Browse GitHub repositories, I discovered Docusaurus. I was very impressed by its capabilitwasthe examples of other sites built using it, which convinced me it was the perfect framework for my personal website. I plan to add many more features .
+            Initially, I considered vibe-coding a website from scratch, but the effort required was too much. So, I chose a lean, incremental approach.
             <br />
-             this site in the future, so keep watching for updates!
+            While searching for documentation generator frameworks, I discovered Docusaurus. I was impressed by its capabilities, and visiting the <a href="https://docusaurus.io/showcase" target="_blank" rel="noopener noreferrer">site showcase</a> convinced me to use this framework for my personal website.
+            <br />
           </div>
         </div>
         <h2 className={styles.thanksHeading}>Thanks</h2>

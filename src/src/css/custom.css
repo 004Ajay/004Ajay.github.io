@@ -46,6 +46,11 @@
   font-size: 1.5rem;
 }
 
+.navbar-name {
+  font-size: 20px; /* Increase as needed */
+  font-weight: bold; /* Optional */
+}
+
 /* Reduce title size in blog list */
   .blog-list-page h2[class*="title"]
   {
@@ -103,3 +108,4 @@
     }
   }
 } */
+ 
