@@ -93,6 +93,26 @@ function Home(): JSX.Element {
       </a>
     </div>
     </div>
+
+    <div className={styles.hiddenLinksContainer}>
+      ﹒
+      <a href="/" title="Docs" className={styles.hiddenLinkItem} aria-label="Docs">
+        Docs
+      </a>
+      <a href="/docs/category/commands" title="Commands" className={styles.hiddenLinkItem} aria-label="Commands">
+        Commands
+      </a>
+      <a href="/docs/category/programming" title="Programming" className={styles.hiddenLinkItem} aria-label="Programming">
+        Programming
+      </a>
+      <a href="/docs/category/gists" title="Gists" className={styles.hiddenLinkItem} aria-label="Gists">
+        Gists
+      </a>
+      <a href="/docs/category/maths" title="Maths" className={styles.hiddenLinkItem} aria-label="Maths">
+        Maths
+      </a>
+      ﹒
+    </div>
       </main>
     </Layout>
   );

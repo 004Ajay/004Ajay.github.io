@@ -1,7 +1,7 @@
 ---
 id: update_grub_linux
 title: Update Grub (Linux)
-sidebar_label: Update Grub (Linux)
+sidebar_label: Update Grub
 ---
 
 ### Change GRUB `default selection` and `pause time` to select preferred OS

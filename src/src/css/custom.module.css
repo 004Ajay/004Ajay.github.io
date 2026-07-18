@@ -242,3 +242,31 @@ body {
   transform: translateY(-3px);
   opacity: 1;
 }
+
+/* Container for the hidden link set */
+.hiddenLinksContainer {
+  margin-top: 5.5rem;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Base style: Completely transparent but still layout-functional */
+.hiddenLinkItem {
+  /* color: #fffcfc; */
+  color: var(--ifm-text-color);
+  font-size: 1.3rem;
+  text-decoration: none;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.25s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+/* Visible on hover */
+.hiddenLinkItem:hover {
+  opacity: 1;
+  /* color: #fffcfc; */
+  color: var(--ifm-color-primary);
+  transform: translateY(-1px);
+}

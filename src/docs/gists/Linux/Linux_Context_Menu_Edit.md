@@ -1,7 +1,7 @@
 ---
 id: Linux_Context_Menu_Edit
 title: Linux Context Menu Editing
-sidebar_label: Linux Context Menu Editing
+sidebar_label: Context Menu Editing
 ---
 
 ### New addition in linux context menu (options that comes on right-click)
