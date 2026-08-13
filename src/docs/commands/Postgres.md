@@ -21,3 +21,33 @@ _can select `data_type`, `table_name` etc. For complete list, replace `column_na
 ```psql
 \d your_table_name
 ```
+
+---
+
+## Postgres Terminal
+
+### List all tables
+
+```psql
+\dt
+```
+
+with their size
+
+```psql
+\dt+
+```
+
+---
+
+### List all databases
+
+```psql
+\l
+```
+
+with their size
+
+```psql
+\l+
+```
