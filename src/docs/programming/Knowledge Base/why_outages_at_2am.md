@@ -1,4 +1,8 @@
-## Why most system outage or problems happens at 2am-3am time?
+---
+id: sys_outage
+title: Why most system outages happens at 2am-3am?
+sidebar_label: System Outage at 2am
+---
 
 1. Maintenance & deployments are scheduled at night
 

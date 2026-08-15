@@ -1,4 +1,10 @@
-`list` in Python
+---
+id: python_list
+title: List
+sidebar_label: List
+---
+
+**`list` in Python**
 
 ```python
 a_list = [1, "ajay", true]

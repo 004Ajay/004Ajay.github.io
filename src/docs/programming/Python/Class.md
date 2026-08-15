@@ -1,5 +1,5 @@
 ---
-id: Class
+id: python_class
 title: Class
 sidebar_label: Class
 ---

@@ -1,5 +1,5 @@
 ---
-id: Functions
+id: python_functions
 title: Functions
 sidebar_label: Functions
 ---
