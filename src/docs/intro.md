@@ -13,3 +13,5 @@ _Landing page of different type of documents_
 > [Gists](/docs/category/gists)
 
 > [Maths](/docs/category/maths)
+
+> [Programming](/docs/category/programming)

@@ -96,7 +96,7 @@ function Home(): JSX.Element {
 
     <div className={styles.hiddenLinksContainer}>
       ﹒
-      <a href="/" title="Docs" className={styles.hiddenLinkItem} aria-label="Docs">
+      <a href="/docs/intro" title="Docs" className={styles.hiddenLinkItem} aria-label="Docs">
         Docs
       </a>
       <a href="/docs/category/commands" title="Commands" className={styles.hiddenLinkItem} aria-label="Commands">
