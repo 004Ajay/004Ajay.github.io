@@ -56,7 +56,7 @@ const config: Config = {
         indexDocs: true, // Index documentation pages
         indexPages: true, // Index static pages (like your /resume or /index, i.e. 'src/pages')
         docsDir: 'docs', // Docs folder path relative to the site root (usually 'docs')
-        blogDir: 'blog', // Blog folder path relative to the site root (usually 'blog')
+        // blogDir: 'blog', // Blog folder path relative to the site root (usually 'blog')
         highlightSearchTermsOnTargetPage: true,
         // hideSearchBarWithNoSearchContext: true,
         // searchBarShortcut: true,
