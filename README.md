@@ -14,4 +14,9 @@ Contents:
 * `push_website.bat` → an automation file that pushes final files to GitHub.
 
 ## Local Development: see [this readme](https://github.com/004Ajay/004Ajay.github.io/blob/main/src/README.md)
-    
+
+---
+
+## New Changes
+
+- Added a git-hook to build the website pre-commit
