@@ -22,6 +22,59 @@ grep -C 10 "Refresh" structure.json
 
 ---
 
+## grep all files in a directory
+
+```bash
+grep -n "a word" *
+```
+
+To search recursively (including subdirectories):
+
+```bash
+grep -Rni "a word" *
+```
+
+---
+
+## Useful Extra Options
+
+Only certain files:
+
+```bash
+grep -ni "a word" *.log
+```
+
+Show filename + line number + matching line:
+
+```bash
+grep -Hn "a word" *
+```
+
+Case-insensitive search:
+
+```bash
+grep -Hin "a word" *
+```
+
+If some files are binary (to get rid of noisy output):
+
+```bash
+grep -HinI "a word" *
+```
+
+---
+
+| Flag | Meaning                 | What it does                                                                |
+| ---- | ----------------------- | --------------------------------------------------------------------------- |
+| `-H` | **With filename**       | Always prints the filename where the match was found                        |
+| `-i` | **Ignore case**         | Matches `a word`, `A Word`, `A WORD`, etc. |
+| `-n` | **Line number**         | Shows the line number containing the match                                  |
+| `-I` | **Ignore binary files** | Skips files that `grep` considers binary                                    |
+| `*`  | **Wildcard**            | Passes all files in the current directory to `grep`                         |
+
+
+---
+
 
 ## Search a term in any files on a folder
 
