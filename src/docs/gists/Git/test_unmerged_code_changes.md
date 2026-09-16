@@ -17,7 +17,7 @@ Assume:
 
 #### Cherry-pick the test commits
 
-```git
+```bash
 git checkout feature
 git cherry-pick <test_commit_hash>
 ```
@@ -25,7 +25,7 @@ _Thumb rule: `cherry-pick` the commits of branch whichever is lesser in count_
 
 If there are so many commits, do squash:
 
-```git
+```bash
 git cherry-pick -n <oldest-commit-hash>~1..<newest-commit-hash>
 ```
 
@@ -37,7 +37,7 @@ pytest -vs /path/to/test_file.py
 
 When done, if you don't want those commits (reset or discard the files):
 
-```git
+```bash
 git reset --hard HEAD~1   # if it was the cherry-picked commit
 ```
 
@@ -45,7 +45,7 @@ git reset --hard HEAD~1   # if it was the cherry-picked commit
 
 ### Option 2. Merge the test branch temporarily
 
-```git
+```bash
 git checkout feature
 git merge tests
 ```
@@ -58,7 +58,7 @@ Reset or discard the files
 
 ### Option 3. Stash + Checkout/Switch
 
-```git
+```bash
 git stash (or VS-Code Stash)
 git checkout tests
 git merge feature
